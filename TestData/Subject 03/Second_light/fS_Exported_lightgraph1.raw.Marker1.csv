@@ -1,0 +1,28 @@
+fnirSoft:,Exported CSV File
+Version:,4.3
+ExportDate:,2/26/2025 10:18:38 AM
+VariableInfo
+Name:,lightgraph1.raw.Marker1
+Size:,14 x 2
+Type:,Numeric
+Content:,Marker
+Date:,2/26/2025 10:18:14 AM
+Notes:,Marker saved by Lightgraph from files C:\Users\NeuroLabPC_1\Documents\COBI Studio Data\sudeep data\Subject 03\SUB_03_02_02051508.nir  C:\Users\NeuroLabPC_1\Documents\COBI Studio Data\sudeep data\Subject 03\SUB_03_02_02051508.mrk  C:\Users\NeuroLabPC_1\Documents\COBI Studio Data\sudeep data\Subject 03\SUB_03_02_02051508_C.mrk
+Labels:,MARKER
+VariableData
+Marker,Marker
+MarkerTime,MarkerType
+314.455,-2
+324.137,-3
+324.137,-4
+324.958,-5
+330.407,1
+568.079,2
+760.516,1
+880.782,2
+1033.547,1
+1153.563,2
+1292.25,1
+1411.782,2
+1551.219,1
+1558.746,-1

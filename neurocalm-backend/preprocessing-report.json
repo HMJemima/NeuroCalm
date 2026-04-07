@@ -1,0 +1,330 @@
+[
+  {
+    "path": "C:\\Users\\BS01685.BS-01685\\NeuroCalm\\TestData\\Subject 01\\First_light\\fS_Exported_lightgraph1.raw.Block1.csv",
+    "kind": "fnirsoft_export",
+    "compatible": true,
+    "reason": "Raw fnirSoft export detected. It is not directly model-ready, but the backend can now build an experimental Tufts-style 8-feature signal from this export before windowing and prediction.",
+    "details": {
+      "size": "3315 x 48",
+      "content": "Light",
+      "required_features": [
+        "AB_I_O",
+        "AB_PHI_O",
+        "AB_I_DO",
+        "AB_PHI_DO",
+        "CD_I_O",
+        "CD_PHI_O",
+        "CD_I_DO",
+        "CD_PHI_DO"
+      ],
+      "experimental_pipeline": true
+    },
+    "experimental_conversion": true,
+    "window_count": 2768,
+    "row_count": 415200
+  },
+  {
+    "path": "C:\\Users\\BS01685.BS-01685\\NeuroCalm\\TestData\\Subject 01\\First_oxy\\fS_Exported_oxygraph1.hbo.Block1.csv",
+    "kind": "fnirsoft_export",
+    "compatible": true,
+    "reason": "Raw fnirSoft export detected. It is not directly model-ready, but the backend can now build an experimental Tufts-style 8-feature signal from this export before windowing and prediction.",
+    "details": {
+      "size": "3315 x 16",
+      "content": "Hemoglobin",
+      "required_features": [
+        "AB_I_O",
+        "AB_PHI_O",
+        "AB_I_DO",
+        "AB_PHI_DO",
+        "CD_I_O",
+        "CD_PHI_O",
+        "CD_I_DO",
+        "CD_PHI_DO"
+      ],
+      "experimental_pipeline": true
+    },
+    "experimental_conversion": true,
+    "window_count": 2755,
+    "row_count": 413250
+  },
+  {
+    "path": "C:\\Users\\BS01685.BS-01685\\NeuroCalm\\TestData\\Subject 01\\First_oxy\\fS_Exported_oxygraph1.hbr.Block1.csv",
+    "kind": "fnirsoft_export",
+    "compatible": true,
+    "reason": "Raw fnirSoft export detected. It is not directly model-ready, but the backend can now build an experimental Tufts-style 8-feature signal from this export before windowing and prediction.",
+    "details": {
+      "size": "3315 x 16",
+      "content": "Hemoglobin",
+      "required_features": [
+        "AB_I_O",
+        "AB_PHI_O",
+        "AB_I_DO",
+        "AB_PHI_DO",
+        "CD_I_O",
+        "CD_PHI_O",
+        "CD_I_DO",
+        "CD_PHI_DO"
+      ],
+      "experimental_pipeline": true
+    },
+    "experimental_conversion": true,
+    "window_count": 2755,
+    "row_count": 413250
+  },
+  {
+    "path": "C:\\Users\\BS01685.BS-01685\\NeuroCalm\\TestData\\Subject 01\\First_oxy\\fS_Exported_oxygraph1.hbt.Block1.csv",
+    "kind": "fnirsoft_export",
+    "compatible": true,
+    "reason": "Raw fnirSoft export detected. It is not directly model-ready, but the backend can now build an experimental Tufts-style 8-feature signal from this export before windowing and prediction.",
+    "details": {
+      "size": "3315 x 16",
+      "content": "Hemoglobin",
+      "required_features": [
+        "AB_I_O",
+        "AB_PHI_O",
+        "AB_I_DO",
+        "AB_PHI_DO",
+        "CD_I_O",
+        "CD_PHI_O",
+        "CD_I_DO",
+        "CD_PHI_DO"
+      ],
+      "experimental_pipeline": true
+    },
+    "experimental_conversion": true,
+    "window_count": 2755,
+    "row_count": 413250
+  },
+  {
+    "path": "C:\\Users\\BS01685.BS-01685\\NeuroCalm\\TestData\\Subject 01\\First_oxy\\fS_Exported_oxygraph1.oxy.Block1.csv",
+    "kind": "fnirsoft_export",
+    "compatible": true,
+    "reason": "Raw fnirSoft export detected. It is not directly model-ready, but the backend can now build an experimental Tufts-style 8-feature signal from this export before windowing and prediction.",
+    "details": {
+      "size": "3315 x 16",
+      "content": "Hemoglobin",
+      "required_features": [
+        "AB_I_O",
+        "AB_PHI_O",
+        "AB_I_DO",
+        "AB_PHI_DO",
+        "CD_I_O",
+        "CD_PHI_O",
+        "CD_I_DO",
+        "CD_PHI_DO"
+      ],
+      "experimental_pipeline": true
+    },
+    "experimental_conversion": true,
+    "window_count": 2755,
+    "row_count": 413250
+  },
+  {
+    "path": "C:\\Users\\BS01685.BS-01685\\NeuroCalm\\TestData\\Subject 01\\Second_light\\fS_Exported_lightgraph1.raw.Block1.csv",
+    "kind": "fnirsoft_export",
+    "compatible": true,
+    "reason": "Raw fnirSoft export detected. It is not directly model-ready, but the backend can now build an experimental Tufts-style 8-feature signal from this export before windowing and prediction.",
+    "details": {
+      "size": "2265 x 48",
+      "content": "Light",
+      "required_features": [
+        "AB_I_O",
+        "AB_PHI_O",
+        "AB_I_DO",
+        "AB_PHI_DO",
+        "CD_I_O",
+        "CD_PHI_O",
+        "CD_I_DO",
+        "CD_PHI_DO"
+      ],
+      "experimental_pipeline": true
+    },
+    "experimental_conversion": true,
+    "window_count": 1876,
+    "row_count": 281400
+  },
+  {
+    "path": "C:\\Users\\BS01685.BS-01685\\NeuroCalm\\TestData\\Subject 01\\Second_oxy\\fS_Exported_oxygraph2.hbo.Block1.csv",
+    "kind": "fnirsoft_export",
+    "compatible": true,
+    "reason": "Raw fnirSoft export detected. It is not directly model-ready, but the backend can now build an experimental Tufts-style 8-feature signal from this export before windowing and prediction.",
+    "details": {
+      "size": "2265 x 16",
+      "content": "Hemoglobin",
+      "required_features": [
+        "AB_I_O",
+        "AB_PHI_O",
+        "AB_I_DO",
+        "AB_PHI_DO",
+        "CD_I_O",
+        "CD_PHI_O",
+        "CD_I_DO",
+        "CD_PHI_DO"
+      ],
+      "experimental_pipeline": true
+    },
+    "experimental_conversion": true,
+    "window_count": 1860,
+    "row_count": 279000
+  },
+  {
+    "path": "C:\\Users\\BS01685.BS-01685\\NeuroCalm\\TestData\\Subject 01\\Second_oxy\\fS_Exported_oxygraph2.hbr.Block1.csv",
+    "kind": "fnirsoft_export",
+    "compatible": true,
+    "reason": "Raw fnirSoft export detected. It is not directly model-ready, but the backend can now build an experimental Tufts-style 8-feature signal from this export before windowing and prediction.",
+    "details": {
+      "size": "2265 x 16",
+      "content": "Hemoglobin",
+      "required_features": [
+        "AB_I_O",
+        "AB_PHI_O",
+        "AB_I_DO",
+        "AB_PHI_DO",
+        "CD_I_O",
+        "CD_PHI_O",
+        "CD_I_DO",
+        "CD_PHI_DO"
+      ],
+      "experimental_pipeline": true
+    },
+    "experimental_conversion": true,
+    "window_count": 1860,
+    "row_count": 279000
+  },
+  {
+    "path": "C:\\Users\\BS01685.BS-01685\\NeuroCalm\\TestData\\Subject 01\\Second_oxy\\fS_Exported_oxygraph2.hbt.Block1.csv",
+    "kind": "fnirsoft_export",
+    "compatible": true,
+    "reason": "Raw fnirSoft export detected. It is not directly model-ready, but the backend can now build an experimental Tufts-style 8-feature signal from this export before windowing and prediction.",
+    "details": {
+      "size": "2265 x 16",
+      "content": "Hemoglobin",
+      "required_features": [
+        "AB_I_O",
+        "AB_PHI_O",
+        "AB_I_DO",
+        "AB_PHI_DO",
+        "CD_I_O",
+        "CD_PHI_O",
+        "CD_I_DO",
+        "CD_PHI_DO"
+      ],
+      "experimental_pipeline": true
+    },
+    "experimental_conversion": true,
+    "window_count": 1860,
+    "row_count": 279000
+  },
+  {
+    "path": "C:\\Users\\BS01685.BS-01685\\NeuroCalm\\TestData\\Subject 01\\Second_oxy\\fS_Exported_oxygraph2.oxy.Block1.csv",
+    "kind": "fnirsoft_export",
+    "compatible": true,
+    "reason": "Raw fnirSoft export detected. It is not directly model-ready, but the backend can now build an experimental Tufts-style 8-feature signal from this export before windowing and prediction.",
+    "details": {
+      "size": "2265 x 16",
+      "content": "Hemoglobin",
+      "required_features": [
+        "AB_I_O",
+        "AB_PHI_O",
+        "AB_I_DO",
+        "AB_PHI_DO",
+        "CD_I_O",
+        "CD_PHI_O",
+        "CD_I_DO",
+        "CD_PHI_DO"
+      ],
+      "experimental_pipeline": true
+    },
+    "experimental_conversion": true,
+    "window_count": 1860,
+    "row_count": 279000
+  },
+  {
+    "path": "C:\\Users\\BS01685.BS-01685\\NeuroCalm\\TestData\\Subject 01\\SUB_01_01_01141630.nir",
+    "kind": "raw_light_device_export",
+    "compatible": true,
+    "reason": "Raw .nir export detected. It is not directly model-ready, but the backend can now build an experimental Tufts-style 8-feature signal from this file before windowing and prediction.",
+    "details": {
+      "required_features": [
+        "AB_I_O",
+        "AB_PHI_O",
+        "AB_I_DO",
+        "AB_PHI_DO",
+        "CD_I_O",
+        "CD_PHI_O",
+        "CD_I_DO",
+        "CD_PHI_DO"
+      ],
+      "experimental_pipeline": true
+    },
+    "experimental_conversion": true,
+    "window_count": 2786,
+    "row_count": 417900
+  },
+  {
+    "path": "C:\\Users\\BS01685.BS-01685\\NeuroCalm\\TestData\\Subject 01\\SUB_01_01_01141630.oxy",
+    "kind": "raw_hemoglobin_device_export",
+    "compatible": true,
+    "reason": "Raw .oxy export detected. It is not directly model-ready, but the backend can now build an experimental Tufts-style 8-feature signal from this file before windowing and prediction.",
+    "details": {
+      "required_features": [
+        "AB_I_O",
+        "AB_PHI_O",
+        "AB_I_DO",
+        "AB_PHI_DO",
+        "CD_I_O",
+        "CD_PHI_O",
+        "CD_I_DO",
+        "CD_PHI_DO"
+      ],
+      "experimental_pipeline": true
+    },
+    "experimental_conversion": true,
+    "window_count": 2768,
+    "row_count": 415200
+  },
+  {
+    "path": "C:\\Users\\BS01685.BS-01685\\NeuroCalm\\TestData\\Subject 01\\SUB_01_02_01141708.nir",
+    "kind": "raw_light_device_export",
+    "compatible": true,
+    "reason": "Raw .nir export detected. It is not directly model-ready, but the backend can now build an experimental Tufts-style 8-feature signal from this file before windowing and prediction.",
+    "details": {
+      "required_features": [
+        "AB_I_O",
+        "AB_PHI_O",
+        "AB_I_DO",
+        "AB_PHI_DO",
+        "CD_I_O",
+        "CD_PHI_O",
+        "CD_I_DO",
+        "CD_PHI_DO"
+      ],
+      "experimental_pipeline": true
+    },
+    "experimental_conversion": true,
+    "window_count": 1893,
+    "row_count": 283950
+  },
+  {
+    "path": "C:\\Users\\BS01685.BS-01685\\NeuroCalm\\TestData\\Subject 01\\SUB_01_02_01141708.oxy",
+    "kind": "raw_hemoglobin_device_export",
+    "compatible": true,
+    "reason": "Raw .oxy export detected. It is not directly model-ready, but the backend can now build an experimental Tufts-style 8-feature signal from this file before windowing and prediction.",
+    "details": {
+      "required_features": [
+        "AB_I_O",
+        "AB_PHI_O",
+        "AB_I_DO",
+        "AB_PHI_DO",
+        "CD_I_O",
+        "CD_PHI_O",
+        "CD_I_DO",
+        "CD_PHI_DO"
+      ],
+      "experimental_pipeline": true
+    },
+    "experimental_conversion": true,
+    "window_count": 1876,
+    "row_count": 281400
+  }
+]

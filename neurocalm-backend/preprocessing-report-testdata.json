@@ -1,0 +1,954 @@
+[
+  {
+    "path": "C:\\Users\\BS01685.BS-01685\\NeuroCalm\\TestData\\Subject 01\\First_light\\fS_Exported_lightgraph1.raw.Block1.csv",
+    "kind": "fnirsoft_export",
+    "compatible": false,
+    "reason": "Raw fnirSoft export detected. The current model requires the Tufts preprocessed 8-feature signals (AB/CD intensity+phase oxy/deoxy) after dual-slope and band-pass filtering. These exports do not expose those columns directly.",
+    "details": {
+      "size": "3315 x 48",
+      "content": "Light",
+      "required_features": [
+        "AB_I_O",
+        "AB_PHI_O",
+        "AB_I_DO",
+        "AB_PHI_DO",
+        "CD_I_O",
+        "CD_PHI_O",
+        "CD_I_DO",
+        "CD_PHI_DO"
+      ]
+    }
+  },
+  {
+    "path": "C:\\Users\\BS01685.BS-01685\\NeuroCalm\\TestData\\Subject 01\\First_oxy\\fS_Exported_oxygraph1.hbo.Block1.csv",
+    "kind": "fnirsoft_export",
+    "compatible": false,
+    "reason": "Raw fnirSoft export detected. The current model requires the Tufts preprocessed 8-feature signals (AB/CD intensity+phase oxy/deoxy) after dual-slope and band-pass filtering. These exports do not expose those columns directly.",
+    "details": {
+      "size": "3315 x 16",
+      "content": "Hemoglobin",
+      "required_features": [
+        "AB_I_O",
+        "AB_PHI_O",
+        "AB_I_DO",
+        "AB_PHI_DO",
+        "CD_I_O",
+        "CD_PHI_O",
+        "CD_I_DO",
+        "CD_PHI_DO"
+      ]
+    }
+  },
+  {
+    "path": "C:\\Users\\BS01685.BS-01685\\NeuroCalm\\TestData\\Subject 01\\First_oxy\\fS_Exported_oxygraph1.hbr.Block1.csv",
+    "kind": "fnirsoft_export",
+    "compatible": false,
+    "reason": "Raw fnirSoft export detected. The current model requires the Tufts preprocessed 8-feature signals (AB/CD intensity+phase oxy/deoxy) after dual-slope and band-pass filtering. These exports do not expose those columns directly.",
+    "details": {
+      "size": "3315 x 16",
+      "content": "Hemoglobin",
+      "required_features": [
+        "AB_I_O",
+        "AB_PHI_O",
+        "AB_I_DO",
+        "AB_PHI_DO",
+        "CD_I_O",
+        "CD_PHI_O",
+        "CD_I_DO",
+        "CD_PHI_DO"
+      ]
+    }
+  },
+  {
+    "path": "C:\\Users\\BS01685.BS-01685\\NeuroCalm\\TestData\\Subject 01\\First_oxy\\fS_Exported_oxygraph1.hbt.Block1.csv",
+    "kind": "fnirsoft_export",
+    "compatible": false,
+    "reason": "Raw fnirSoft export detected. The current model requires the Tufts preprocessed 8-feature signals (AB/CD intensity+phase oxy/deoxy) after dual-slope and band-pass filtering. These exports do not expose those columns directly.",
+    "details": {
+      "size": "3315 x 16",
+      "content": "Hemoglobin",
+      "required_features": [
+        "AB_I_O",
+        "AB_PHI_O",
+        "AB_I_DO",
+        "AB_PHI_DO",
+        "CD_I_O",
+        "CD_PHI_O",
+        "CD_I_DO",
+        "CD_PHI_DO"
+      ]
+    }
+  },
+  {
+    "path": "C:\\Users\\BS01685.BS-01685\\NeuroCalm\\TestData\\Subject 01\\First_oxy\\fS_Exported_oxygraph1.oxy.Block1.csv",
+    "kind": "fnirsoft_export",
+    "compatible": false,
+    "reason": "Raw fnirSoft export detected. The current model requires the Tufts preprocessed 8-feature signals (AB/CD intensity+phase oxy/deoxy) after dual-slope and band-pass filtering. These exports do not expose those columns directly.",
+    "details": {
+      "size": "3315 x 16",
+      "content": "Hemoglobin",
+      "required_features": [
+        "AB_I_O",
+        "AB_PHI_O",
+        "AB_I_DO",
+        "AB_PHI_DO",
+        "CD_I_O",
+        "CD_PHI_O",
+        "CD_I_DO",
+        "CD_PHI_DO"
+      ]
+    }
+  },
+  {
+    "path": "C:\\Users\\BS01685.BS-01685\\NeuroCalm\\TestData\\Subject 01\\Second_light\\fS_Exported_lightgraph1.raw.Block1.csv",
+    "kind": "fnirsoft_export",
+    "compatible": false,
+    "reason": "Raw fnirSoft export detected. The current model requires the Tufts preprocessed 8-feature signals (AB/CD intensity+phase oxy/deoxy) after dual-slope and band-pass filtering. These exports do not expose those columns directly.",
+    "details": {
+      "size": "2265 x 48",
+      "content": "Light",
+      "required_features": [
+        "AB_I_O",
+        "AB_PHI_O",
+        "AB_I_DO",
+        "AB_PHI_DO",
+        "CD_I_O",
+        "CD_PHI_O",
+        "CD_I_DO",
+        "CD_PHI_DO"
+      ]
+    }
+  },
+  {
+    "path": "C:\\Users\\BS01685.BS-01685\\NeuroCalm\\TestData\\Subject 01\\Second_oxy\\fS_Exported_oxygraph2.hbo.Block1.csv",
+    "kind": "fnirsoft_export",
+    "compatible": false,
+    "reason": "Raw fnirSoft export detected. The current model requires the Tufts preprocessed 8-feature signals (AB/CD intensity+phase oxy/deoxy) after dual-slope and band-pass filtering. These exports do not expose those columns directly.",
+    "details": {
+      "size": "2265 x 16",
+      "content": "Hemoglobin",
+      "required_features": [
+        "AB_I_O",
+        "AB_PHI_O",
+        "AB_I_DO",
+        "AB_PHI_DO",
+        "CD_I_O",
+        "CD_PHI_O",
+        "CD_I_DO",
+        "CD_PHI_DO"
+      ]
+    }
+  },
+  {
+    "path": "C:\\Users\\BS01685.BS-01685\\NeuroCalm\\TestData\\Subject 01\\Second_oxy\\fS_Exported_oxygraph2.hbr.Block1.csv",
+    "kind": "fnirsoft_export",
+    "compatible": false,
+    "reason": "Raw fnirSoft export detected. The current model requires the Tufts preprocessed 8-feature signals (AB/CD intensity+phase oxy/deoxy) after dual-slope and band-pass filtering. These exports do not expose those columns directly.",
+    "details": {
+      "size": "2265 x 16",
+      "content": "Hemoglobin",
+      "required_features": [
+        "AB_I_O",
+        "AB_PHI_O",
+        "AB_I_DO",
+        "AB_PHI_DO",
+        "CD_I_O",
+        "CD_PHI_O",
+        "CD_I_DO",
+        "CD_PHI_DO"
+      ]
+    }
+  },
+  {
+    "path": "C:\\Users\\BS01685.BS-01685\\NeuroCalm\\TestData\\Subject 01\\Second_oxy\\fS_Exported_oxygraph2.hbt.Block1.csv",
+    "kind": "fnirsoft_export",
+    "compatible": false,
+    "reason": "Raw fnirSoft export detected. The current model requires the Tufts preprocessed 8-feature signals (AB/CD intensity+phase oxy/deoxy) after dual-slope and band-pass filtering. These exports do not expose those columns directly.",
+    "details": {
+      "size": "2265 x 16",
+      "content": "Hemoglobin",
+      "required_features": [
+        "AB_I_O",
+        "AB_PHI_O",
+        "AB_I_DO",
+        "AB_PHI_DO",
+        "CD_I_O",
+        "CD_PHI_O",
+        "CD_I_DO",
+        "CD_PHI_DO"
+      ]
+    }
+  },
+  {
+    "path": "C:\\Users\\BS01685.BS-01685\\NeuroCalm\\TestData\\Subject 01\\Second_oxy\\fS_Exported_oxygraph2.oxy.Block1.csv",
+    "kind": "fnirsoft_export",
+    "compatible": false,
+    "reason": "Raw fnirSoft export detected. The current model requires the Tufts preprocessed 8-feature signals (AB/CD intensity+phase oxy/deoxy) after dual-slope and band-pass filtering. These exports do not expose those columns directly.",
+    "details": {
+      "size": "2265 x 16",
+      "content": "Hemoglobin",
+      "required_features": [
+        "AB_I_O",
+        "AB_PHI_O",
+        "AB_I_DO",
+        "AB_PHI_DO",
+        "CD_I_O",
+        "CD_PHI_O",
+        "CD_I_DO",
+        "CD_PHI_DO"
+      ]
+    }
+  },
+  {
+    "path": "C:\\Users\\BS01685.BS-01685\\NeuroCalm\\TestData\\Subject 01\\SUB_01_01_01141630.nir",
+    "kind": "raw_light_device_export",
+    "compatible": false,
+    "reason": "Raw .nir export detected. The current SALIENT model expects the Tufts 8-feature dual-slope/band-pass processed signals, not device-level light exports.",
+    "details": {
+      "required_features": [
+        "AB_I_O",
+        "AB_PHI_O",
+        "AB_I_DO",
+        "AB_PHI_DO",
+        "CD_I_O",
+        "CD_PHI_O",
+        "CD_I_DO",
+        "CD_PHI_DO"
+      ]
+    }
+  },
+  {
+    "path": "C:\\Users\\BS01685.BS-01685\\NeuroCalm\\TestData\\Subject 01\\SUB_01_01_01141630.oxy",
+    "kind": "raw_hemoglobin_device_export",
+    "compatible": false,
+    "reason": "Raw .oxy export detected. The current SALIENT model also needs the phase-based hemoglobin channels (AB_PHI_*, CD_PHI_*), which are not present in these exports.",
+    "details": {
+      "required_features": [
+        "AB_I_O",
+        "AB_PHI_O",
+        "AB_I_DO",
+        "AB_PHI_DO",
+        "CD_I_O",
+        "CD_PHI_O",
+        "CD_I_DO",
+        "CD_PHI_DO"
+      ]
+    }
+  },
+  {
+    "path": "C:\\Users\\BS01685.BS-01685\\NeuroCalm\\TestData\\Subject 01\\SUB_01_02_01141708.nir",
+    "kind": "raw_light_device_export",
+    "compatible": false,
+    "reason": "Raw .nir export detected. The current SALIENT model expects the Tufts 8-feature dual-slope/band-pass processed signals, not device-level light exports.",
+    "details": {
+      "required_features": [
+        "AB_I_O",
+        "AB_PHI_O",
+        "AB_I_DO",
+        "AB_PHI_DO",
+        "CD_I_O",
+        "CD_PHI_O",
+        "CD_I_DO",
+        "CD_PHI_DO"
+      ]
+    }
+  },
+  {
+    "path": "C:\\Users\\BS01685.BS-01685\\NeuroCalm\\TestData\\Subject 01\\SUB_01_02_01141708.oxy",
+    "kind": "raw_hemoglobin_device_export",
+    "compatible": false,
+    "reason": "Raw .oxy export detected. The current SALIENT model also needs the phase-based hemoglobin channels (AB_PHI_*, CD_PHI_*), which are not present in these exports.",
+    "details": {
+      "required_features": [
+        "AB_I_O",
+        "AB_PHI_O",
+        "AB_I_DO",
+        "AB_PHI_DO",
+        "CD_I_O",
+        "CD_PHI_O",
+        "CD_I_DO",
+        "CD_PHI_DO"
+      ]
+    }
+  },
+  {
+    "path": "C:\\Users\\BS01685.BS-01685\\NeuroCalm\\TestData\\Subject 03\\First_light\\fS_Exported_lightgraph1.raw.Block1.csv",
+    "kind": "fnirsoft_export",
+    "compatible": false,
+    "reason": "Raw fnirSoft export detected. The current model requires the Tufts preprocessed 8-feature signals (AB/CD intensity+phase oxy/deoxy) after dual-slope and band-pass filtering. These exports do not expose those columns directly.",
+    "details": {
+      "size": "3023 x 48",
+      "content": "Light",
+      "required_features": [
+        "AB_I_O",
+        "AB_PHI_O",
+        "AB_I_DO",
+        "AB_PHI_DO",
+        "CD_I_O",
+        "CD_PHI_O",
+        "CD_I_DO",
+        "CD_PHI_DO"
+      ]
+    }
+  },
+  {
+    "path": "C:\\Users\\BS01685.BS-01685\\NeuroCalm\\TestData\\Subject 03\\First_oxy\\fS_Exported_oxygraph1.hbo.Block1.csv",
+    "kind": "fnirsoft_export",
+    "compatible": false,
+    "reason": "Raw fnirSoft export detected. The current model requires the Tufts preprocessed 8-feature signals (AB/CD intensity+phase oxy/deoxy) after dual-slope and band-pass filtering. These exports do not expose those columns directly.",
+    "details": {
+      "size": "3023 x 16",
+      "content": "Hemoglobin",
+      "required_features": [
+        "AB_I_O",
+        "AB_PHI_O",
+        "AB_I_DO",
+        "AB_PHI_DO",
+        "CD_I_O",
+        "CD_PHI_O",
+        "CD_I_DO",
+        "CD_PHI_DO"
+      ]
+    }
+  },
+  {
+    "path": "C:\\Users\\BS01685.BS-01685\\NeuroCalm\\TestData\\Subject 03\\First_oxy\\fS_Exported_oxygraph1.hbr.Block1.csv",
+    "kind": "fnirsoft_export",
+    "compatible": false,
+    "reason": "Raw fnirSoft export detected. The current model requires the Tufts preprocessed 8-feature signals (AB/CD intensity+phase oxy/deoxy) after dual-slope and band-pass filtering. These exports do not expose those columns directly.",
+    "details": {
+      "size": "3023 x 16",
+      "content": "Hemoglobin",
+      "required_features": [
+        "AB_I_O",
+        "AB_PHI_O",
+        "AB_I_DO",
+        "AB_PHI_DO",
+        "CD_I_O",
+        "CD_PHI_O",
+        "CD_I_DO",
+        "CD_PHI_DO"
+      ]
+    }
+  },
+  {
+    "path": "C:\\Users\\BS01685.BS-01685\\NeuroCalm\\TestData\\Subject 03\\First_oxy\\fS_Exported_oxygraph1.hbt.Block1.csv",
+    "kind": "fnirsoft_export",
+    "compatible": false,
+    "reason": "Raw fnirSoft export detected. The current model requires the Tufts preprocessed 8-feature signals (AB/CD intensity+phase oxy/deoxy) after dual-slope and band-pass filtering. These exports do not expose those columns directly.",
+    "details": {
+      "size": "3023 x 16",
+      "content": "Hemoglobin",
+      "required_features": [
+        "AB_I_O",
+        "AB_PHI_O",
+        "AB_I_DO",
+        "AB_PHI_DO",
+        "CD_I_O",
+        "CD_PHI_O",
+        "CD_I_DO",
+        "CD_PHI_DO"
+      ]
+    }
+  },
+  {
+    "path": "C:\\Users\\BS01685.BS-01685\\NeuroCalm\\TestData\\Subject 03\\First_oxy\\fS_Exported_oxygraph1.oxy.Block1.csv",
+    "kind": "fnirsoft_export",
+    "compatible": false,
+    "reason": "Raw fnirSoft export detected. The current model requires the Tufts preprocessed 8-feature signals (AB/CD intensity+phase oxy/deoxy) after dual-slope and band-pass filtering. These exports do not expose those columns directly.",
+    "details": {
+      "size": "3023 x 16",
+      "content": "Hemoglobin",
+      "required_features": [
+        "AB_I_O",
+        "AB_PHI_O",
+        "AB_I_DO",
+        "AB_PHI_DO",
+        "CD_I_O",
+        "CD_PHI_O",
+        "CD_I_DO",
+        "CD_PHI_DO"
+      ]
+    }
+  },
+  {
+    "path": "C:\\Users\\BS01685.BS-01685\\NeuroCalm\\TestData\\Subject 03\\Second_light\\fS_Exported_lightgraph1.raw.Block1.csv",
+    "kind": "fnirsoft_export",
+    "compatible": false,
+    "reason": "Raw fnirSoft export detected. The current model requires the Tufts preprocessed 8-feature signals (AB/CD intensity+phase oxy/deoxy) after dual-slope and band-pass filtering. These exports do not expose those columns directly.",
+    "details": {
+      "size": "2420 x 48",
+      "content": "Light",
+      "required_features": [
+        "AB_I_O",
+        "AB_PHI_O",
+        "AB_I_DO",
+        "AB_PHI_DO",
+        "CD_I_O",
+        "CD_PHI_O",
+        "CD_I_DO",
+        "CD_PHI_DO"
+      ]
+    }
+  },
+  {
+    "path": "C:\\Users\\BS01685.BS-01685\\NeuroCalm\\TestData\\Subject 03\\Second_oxy\\fS_Exported_oxygraph1.hbo.Block1.csv",
+    "kind": "fnirsoft_export",
+    "compatible": false,
+    "reason": "Raw fnirSoft export detected. The current model requires the Tufts preprocessed 8-feature signals (AB/CD intensity+phase oxy/deoxy) after dual-slope and band-pass filtering. These exports do not expose those columns directly.",
+    "details": {
+      "size": "2420 x 16",
+      "content": "Hemoglobin",
+      "required_features": [
+        "AB_I_O",
+        "AB_PHI_O",
+        "AB_I_DO",
+        "AB_PHI_DO",
+        "CD_I_O",
+        "CD_PHI_O",
+        "CD_I_DO",
+        "CD_PHI_DO"
+      ]
+    }
+  },
+  {
+    "path": "C:\\Users\\BS01685.BS-01685\\NeuroCalm\\TestData\\Subject 03\\Second_oxy\\fS_Exported_oxygraph1.hbr.Block1.csv",
+    "kind": "fnirsoft_export",
+    "compatible": false,
+    "reason": "Raw fnirSoft export detected. The current model requires the Tufts preprocessed 8-feature signals (AB/CD intensity+phase oxy/deoxy) after dual-slope and band-pass filtering. These exports do not expose those columns directly.",
+    "details": {
+      "size": "2420 x 16",
+      "content": "Hemoglobin",
+      "required_features": [
+        "AB_I_O",
+        "AB_PHI_O",
+        "AB_I_DO",
+        "AB_PHI_DO",
+        "CD_I_O",
+        "CD_PHI_O",
+        "CD_I_DO",
+        "CD_PHI_DO"
+      ]
+    }
+  },
+  {
+    "path": "C:\\Users\\BS01685.BS-01685\\NeuroCalm\\TestData\\Subject 03\\Second_oxy\\fS_Exported_oxygraph1.hbt.Block1.csv",
+    "kind": "fnirsoft_export",
+    "compatible": false,
+    "reason": "Raw fnirSoft export detected. The current model requires the Tufts preprocessed 8-feature signals (AB/CD intensity+phase oxy/deoxy) after dual-slope and band-pass filtering. These exports do not expose those columns directly.",
+    "details": {
+      "size": "2420 x 16",
+      "content": "Hemoglobin",
+      "required_features": [
+        "AB_I_O",
+        "AB_PHI_O",
+        "AB_I_DO",
+        "AB_PHI_DO",
+        "CD_I_O",
+        "CD_PHI_O",
+        "CD_I_DO",
+        "CD_PHI_DO"
+      ]
+    }
+  },
+  {
+    "path": "C:\\Users\\BS01685.BS-01685\\NeuroCalm\\TestData\\Subject 03\\Second_oxy\\fS_Exported_oxygraph1.oxy.Block1.csv",
+    "kind": "fnirsoft_export",
+    "compatible": false,
+    "reason": "Raw fnirSoft export detected. The current model requires the Tufts preprocessed 8-feature signals (AB/CD intensity+phase oxy/deoxy) after dual-slope and band-pass filtering. These exports do not expose those columns directly.",
+    "details": {
+      "size": "2420 x 16",
+      "content": "Hemoglobin",
+      "required_features": [
+        "AB_I_O",
+        "AB_PHI_O",
+        "AB_I_DO",
+        "AB_PHI_DO",
+        "CD_I_O",
+        "CD_PHI_O",
+        "CD_I_DO",
+        "CD_PHI_DO"
+      ]
+    }
+  },
+  {
+    "path": "C:\\Users\\BS01685.BS-01685\\NeuroCalm\\TestData\\Subject 03\\SUB_03_01_02051427.nir",
+    "kind": "raw_light_device_export",
+    "compatible": false,
+    "reason": "Raw .nir export detected. The current SALIENT model expects the Tufts 8-feature dual-slope/band-pass processed signals, not device-level light exports.",
+    "details": {
+      "required_features": [
+        "AB_I_O",
+        "AB_PHI_O",
+        "AB_I_DO",
+        "AB_PHI_DO",
+        "CD_I_O",
+        "CD_PHI_O",
+        "CD_I_DO",
+        "CD_PHI_DO"
+      ]
+    }
+  },
+  {
+    "path": "C:\\Users\\BS01685.BS-01685\\NeuroCalm\\TestData\\Subject 03\\SUB_03_01_02051427.oxy",
+    "kind": "raw_hemoglobin_device_export",
+    "compatible": false,
+    "reason": "Raw .oxy export detected. The current SALIENT model also needs the phase-based hemoglobin channels (AB_PHI_*, CD_PHI_*), which are not present in these exports.",
+    "details": {
+      "required_features": [
+        "AB_I_O",
+        "AB_PHI_O",
+        "AB_I_DO",
+        "AB_PHI_DO",
+        "CD_I_O",
+        "CD_PHI_O",
+        "CD_I_DO",
+        "CD_PHI_DO"
+      ]
+    }
+  },
+  {
+    "path": "C:\\Users\\BS01685.BS-01685\\NeuroCalm\\TestData\\Subject 03\\SUB_03_02_02051508.nir",
+    "kind": "raw_light_device_export",
+    "compatible": false,
+    "reason": "Raw .nir export detected. The current SALIENT model expects the Tufts 8-feature dual-slope/band-pass processed signals, not device-level light exports.",
+    "details": {
+      "required_features": [
+        "AB_I_O",
+        "AB_PHI_O",
+        "AB_I_DO",
+        "AB_PHI_DO",
+        "CD_I_O",
+        "CD_PHI_O",
+        "CD_I_DO",
+        "CD_PHI_DO"
+      ]
+    }
+  },
+  {
+    "path": "C:\\Users\\BS01685.BS-01685\\NeuroCalm\\TestData\\Subject 03\\SUB_03_02_02051508.oxy",
+    "kind": "raw_hemoglobin_device_export",
+    "compatible": false,
+    "reason": "Raw .oxy export detected. The current SALIENT model also needs the phase-based hemoglobin channels (AB_PHI_*, CD_PHI_*), which are not present in these exports.",
+    "details": {
+      "required_features": [
+        "AB_I_O",
+        "AB_PHI_O",
+        "AB_I_DO",
+        "AB_PHI_DO",
+        "CD_I_O",
+        "CD_PHI_O",
+        "CD_I_DO",
+        "CD_PHI_DO"
+      ]
+    }
+  },
+  {
+    "path": "C:\\Users\\BS01685.BS-01685\\NeuroCalm\\TestData\\Subject 08\\First_light\\fS_Exported_lightgraph1.raw.Block1.csv",
+    "kind": "fnirsoft_export",
+    "compatible": false,
+    "reason": "Raw fnirSoft export detected. The current model requires the Tufts preprocessed 8-feature signals (AB/CD intensity+phase oxy/deoxy) after dual-slope and band-pass filtering. These exports do not expose those columns directly.",
+    "details": {
+      "size": "3015 x 48",
+      "content": "Light",
+      "required_features": [
+        "AB_I_O",
+        "AB_PHI_O",
+        "AB_I_DO",
+        "AB_PHI_DO",
+        "CD_I_O",
+        "CD_PHI_O",
+        "CD_I_DO",
+        "CD_PHI_DO"
+      ]
+    }
+  },
+  {
+    "path": "C:\\Users\\BS01685.BS-01685\\NeuroCalm\\TestData\\Subject 08\\First_oxy\\fS_Exported_oxygraph1.hbo.Block1.csv",
+    "kind": "fnirsoft_export",
+    "compatible": false,
+    "reason": "Raw fnirSoft export detected. The current model requires the Tufts preprocessed 8-feature signals (AB/CD intensity+phase oxy/deoxy) after dual-slope and band-pass filtering. These exports do not expose those columns directly.",
+    "details": {
+      "size": "3015 x 16",
+      "content": "Hemoglobin",
+      "required_features": [
+        "AB_I_O",
+        "AB_PHI_O",
+        "AB_I_DO",
+        "AB_PHI_DO",
+        "CD_I_O",
+        "CD_PHI_O",
+        "CD_I_DO",
+        "CD_PHI_DO"
+      ]
+    }
+  },
+  {
+    "path": "C:\\Users\\BS01685.BS-01685\\NeuroCalm\\TestData\\Subject 08\\First_oxy\\fS_Exported_oxygraph1.hbr.Block1.csv",
+    "kind": "fnirsoft_export",
+    "compatible": false,
+    "reason": "Raw fnirSoft export detected. The current model requires the Tufts preprocessed 8-feature signals (AB/CD intensity+phase oxy/deoxy) after dual-slope and band-pass filtering. These exports do not expose those columns directly.",
+    "details": {
+      "size": "3015 x 16",
+      "content": "Hemoglobin",
+      "required_features": [
+        "AB_I_O",
+        "AB_PHI_O",
+        "AB_I_DO",
+        "AB_PHI_DO",
+        "CD_I_O",
+        "CD_PHI_O",
+        "CD_I_DO",
+        "CD_PHI_DO"
+      ]
+    }
+  },
+  {
+    "path": "C:\\Users\\BS01685.BS-01685\\NeuroCalm\\TestData\\Subject 08\\First_oxy\\fS_Exported_oxygraph1.hbt.Block1.csv",
+    "kind": "fnirsoft_export",
+    "compatible": false,
+    "reason": "Raw fnirSoft export detected. The current model requires the Tufts preprocessed 8-feature signals (AB/CD intensity+phase oxy/deoxy) after dual-slope and band-pass filtering. These exports do not expose those columns directly.",
+    "details": {
+      "size": "3015 x 16",
+      "content": "Hemoglobin",
+      "required_features": [
+        "AB_I_O",
+        "AB_PHI_O",
+        "AB_I_DO",
+        "AB_PHI_DO",
+        "CD_I_O",
+        "CD_PHI_O",
+        "CD_I_DO",
+        "CD_PHI_DO"
+      ]
+    }
+  },
+  {
+    "path": "C:\\Users\\BS01685.BS-01685\\NeuroCalm\\TestData\\Subject 08\\First_oxy\\fS_Exported_oxygraph1.oxy.Block1.csv",
+    "kind": "fnirsoft_export",
+    "compatible": false,
+    "reason": "Raw fnirSoft export detected. The current model requires the Tufts preprocessed 8-feature signals (AB/CD intensity+phase oxy/deoxy) after dual-slope and band-pass filtering. These exports do not expose those columns directly.",
+    "details": {
+      "size": "3015 x 16",
+      "content": "Hemoglobin",
+      "required_features": [
+        "AB_I_O",
+        "AB_PHI_O",
+        "AB_I_DO",
+        "AB_PHI_DO",
+        "CD_I_O",
+        "CD_PHI_O",
+        "CD_I_DO",
+        "CD_PHI_DO"
+      ]
+    }
+  },
+  {
+    "path": "C:\\Users\\BS01685.BS-01685\\NeuroCalm\\TestData\\Subject 08\\Second_light\\fS_Exported_lightgraph1.raw.Block1.csv",
+    "kind": "fnirsoft_export",
+    "compatible": false,
+    "reason": "Raw fnirSoft export detected. The current model requires the Tufts preprocessed 8-feature signals (AB/CD intensity+phase oxy/deoxy) after dual-slope and band-pass filtering. These exports do not expose those columns directly.",
+    "details": {
+      "size": "2209 x 48",
+      "content": "Light",
+      "required_features": [
+        "AB_I_O",
+        "AB_PHI_O",
+        "AB_I_DO",
+        "AB_PHI_DO",
+        "CD_I_O",
+        "CD_PHI_O",
+        "CD_I_DO",
+        "CD_PHI_DO"
+      ]
+    }
+  },
+  {
+    "path": "C:\\Users\\BS01685.BS-01685\\NeuroCalm\\TestData\\Subject 08\\Second_oxy\\fS_Exported_oxygraph1.hbo.Block1.csv",
+    "kind": "fnirsoft_export",
+    "compatible": false,
+    "reason": "Raw fnirSoft export detected. The current model requires the Tufts preprocessed 8-feature signals (AB/CD intensity+phase oxy/deoxy) after dual-slope and band-pass filtering. These exports do not expose those columns directly.",
+    "details": {
+      "size": "2209 x 16",
+      "content": "Hemoglobin",
+      "required_features": [
+        "AB_I_O",
+        "AB_PHI_O",
+        "AB_I_DO",
+        "AB_PHI_DO",
+        "CD_I_O",
+        "CD_PHI_O",
+        "CD_I_DO",
+        "CD_PHI_DO"
+      ]
+    }
+  },
+  {
+    "path": "C:\\Users\\BS01685.BS-01685\\NeuroCalm\\TestData\\Subject 08\\Second_oxy\\fS_Exported_oxygraph1.hbr.Block1.csv",
+    "kind": "fnirsoft_export",
+    "compatible": false,
+    "reason": "Raw fnirSoft export detected. The current model requires the Tufts preprocessed 8-feature signals (AB/CD intensity+phase oxy/deoxy) after dual-slope and band-pass filtering. These exports do not expose those columns directly.",
+    "details": {
+      "size": "2209 x 16",
+      "content": "Hemoglobin",
+      "required_features": [
+        "AB_I_O",
+        "AB_PHI_O",
+        "AB_I_DO",
+        "AB_PHI_DO",
+        "CD_I_O",
+        "CD_PHI_O",
+        "CD_I_DO",
+        "CD_PHI_DO"
+      ]
+    }
+  },
+  {
+    "path": "C:\\Users\\BS01685.BS-01685\\NeuroCalm\\TestData\\Subject 08\\Second_oxy\\fS_Exported_oxygraph1.hbt.Block1.csv",
+    "kind": "fnirsoft_export",
+    "compatible": false,
+    "reason": "Raw fnirSoft export detected. The current model requires the Tufts preprocessed 8-feature signals (AB/CD intensity+phase oxy/deoxy) after dual-slope and band-pass filtering. These exports do not expose those columns directly.",
+    "details": {
+      "size": "2209 x 16",
+      "content": "Hemoglobin",
+      "required_features": [
+        "AB_I_O",
+        "AB_PHI_O",
+        "AB_I_DO",
+        "AB_PHI_DO",
+        "CD_I_O",
+        "CD_PHI_O",
+        "CD_I_DO",
+        "CD_PHI_DO"
+      ]
+    }
+  },
+  {
+    "path": "C:\\Users\\BS01685.BS-01685\\NeuroCalm\\TestData\\Subject 08\\Second_oxy\\fS_Exported_oxygraph1.oxy.Block1.csv",
+    "kind": "fnirsoft_export",
+    "compatible": false,
+    "reason": "Raw fnirSoft export detected. The current model requires the Tufts preprocessed 8-feature signals (AB/CD intensity+phase oxy/deoxy) after dual-slope and band-pass filtering. These exports do not expose those columns directly.",
+    "details": {
+      "size": "2209 x 16",
+      "content": "Hemoglobin",
+      "required_features": [
+        "AB_I_O",
+        "AB_PHI_O",
+        "AB_I_DO",
+        "AB_PHI_DO",
+        "CD_I_O",
+        "CD_PHI_O",
+        "CD_I_DO",
+        "CD_PHI_DO"
+      ]
+    }
+  },
+  {
+    "path": "C:\\Users\\BS01685.BS-01685\\NeuroCalm\\TestData\\Subject 08\\SUB_08_01.nir",
+    "kind": "raw_light_device_export",
+    "compatible": false,
+    "reason": "Raw .nir export detected. The current SALIENT model expects the Tufts 8-feature dual-slope/band-pass processed signals, not device-level light exports.",
+    "details": {
+      "required_features": [
+        "AB_I_O",
+        "AB_PHI_O",
+        "AB_I_DO",
+        "AB_PHI_DO",
+        "CD_I_O",
+        "CD_PHI_O",
+        "CD_I_DO",
+        "CD_PHI_DO"
+      ]
+    }
+  },
+  {
+    "path": "C:\\Users\\BS01685.BS-01685\\NeuroCalm\\TestData\\Subject 08\\SUB_08_01.oxy",
+    "kind": "raw_hemoglobin_device_export",
+    "compatible": false,
+    "reason": "Raw .oxy export detected. The current SALIENT model also needs the phase-based hemoglobin channels (AB_PHI_*, CD_PHI_*), which are not present in these exports.",
+    "details": {
+      "required_features": [
+        "AB_I_O",
+        "AB_PHI_O",
+        "AB_I_DO",
+        "AB_PHI_DO",
+        "CD_I_O",
+        "CD_PHI_O",
+        "CD_I_DO",
+        "CD_PHI_DO"
+      ]
+    }
+  },
+  {
+    "path": "C:\\Users\\BS01685.BS-01685\\NeuroCalm\\TestData\\Subject 08\\SUB_08_02_02041225.nir",
+    "kind": "raw_light_device_export",
+    "compatible": false,
+    "reason": "Raw .nir export detected. The current SALIENT model expects the Tufts 8-feature dual-slope/band-pass processed signals, not device-level light exports.",
+    "details": {
+      "required_features": [
+        "AB_I_O",
+        "AB_PHI_O",
+        "AB_I_DO",
+        "AB_PHI_DO",
+        "CD_I_O",
+        "CD_PHI_O",
+        "CD_I_DO",
+        "CD_PHI_DO"
+      ]
+    }
+  },
+  {
+    "path": "C:\\Users\\BS01685.BS-01685\\NeuroCalm\\TestData\\Subject 08\\SUB_08_02_02041225.oxy",
+    "kind": "raw_hemoglobin_device_export",
+    "compatible": false,
+    "reason": "Raw .oxy export detected. The current SALIENT model also needs the phase-based hemoglobin channels (AB_PHI_*, CD_PHI_*), which are not present in these exports.",
+    "details": {
+      "required_features": [
+        "AB_I_O",
+        "AB_PHI_O",
+        "AB_I_DO",
+        "AB_PHI_DO",
+        "CD_I_O",
+        "CD_PHI_O",
+        "CD_I_DO",
+        "CD_PHI_DO"
+      ]
+    }
+  },
+  {
+    "path": "C:\\Users\\BS01685.BS-01685\\NeuroCalm\\TestData\\Subject 14\\light\\fS_Exported_lightgraph1.raw.Block1.csv",
+    "kind": "fnirsoft_export",
+    "compatible": false,
+    "reason": "Raw fnirSoft export detected. The current model requires the Tufts preprocessed 8-feature signals (AB/CD intensity+phase oxy/deoxy) after dual-slope and band-pass filtering. These exports do not expose those columns directly.",
+    "details": {
+      "size": "5286 x 48",
+      "content": "Light",
+      "required_features": [
+        "AB_I_O",
+        "AB_PHI_O",
+        "AB_I_DO",
+        "AB_PHI_DO",
+        "CD_I_O",
+        "CD_PHI_O",
+        "CD_I_DO",
+        "CD_PHI_DO"
+      ]
+    }
+  },
+  {
+    "path": "C:\\Users\\BS01685.BS-01685\\NeuroCalm\\TestData\\Subject 14\\oxy\\fS_Exported_oxygraph1.hbo.Block1.csv",
+    "kind": "fnirsoft_export",
+    "compatible": false,
+    "reason": "Raw fnirSoft export detected. The current model requires the Tufts preprocessed 8-feature signals (AB/CD intensity+phase oxy/deoxy) after dual-slope and band-pass filtering. These exports do not expose those columns directly.",
+    "details": {
+      "size": "5286 x 16",
+      "content": "Hemoglobin",
+      "required_features": [
+        "AB_I_O",
+        "AB_PHI_O",
+        "AB_I_DO",
+        "AB_PHI_DO",
+        "CD_I_O",
+        "CD_PHI_O",
+        "CD_I_DO",
+        "CD_PHI_DO"
+      ]
+    }
+  },
+  {
+    "path": "C:\\Users\\BS01685.BS-01685\\NeuroCalm\\TestData\\Subject 14\\oxy\\fS_Exported_oxygraph1.hbr.Block1.csv",
+    "kind": "fnirsoft_export",
+    "compatible": false,
+    "reason": "Raw fnirSoft export detected. The current model requires the Tufts preprocessed 8-feature signals (AB/CD intensity+phase oxy/deoxy) after dual-slope and band-pass filtering. These exports do not expose those columns directly.",
+    "details": {
+      "size": "5286 x 16",
+      "content": "Hemoglobin",
+      "required_features": [
+        "AB_I_O",
+        "AB_PHI_O",
+        "AB_I_DO",
+        "AB_PHI_DO",
+        "CD_I_O",
+        "CD_PHI_O",
+        "CD_I_DO",
+        "CD_PHI_DO"
+      ]
+    }
+  },
+  {
+    "path": "C:\\Users\\BS01685.BS-01685\\NeuroCalm\\TestData\\Subject 14\\oxy\\fS_Exported_oxygraph1.hbt.Block1.csv",
+    "kind": "fnirsoft_export",
+    "compatible": false,
+    "reason": "Raw fnirSoft export detected. The current model requires the Tufts preprocessed 8-feature signals (AB/CD intensity+phase oxy/deoxy) after dual-slope and band-pass filtering. These exports do not expose those columns directly.",
+    "details": {
+      "size": "5286 x 16",
+      "content": "Hemoglobin",
+      "required_features": [
+        "AB_I_O",
+        "AB_PHI_O",
+        "AB_I_DO",
+        "AB_PHI_DO",
+        "CD_I_O",
+        "CD_PHI_O",
+        "CD_I_DO",
+        "CD_PHI_DO"
+      ]
+    }
+  },
+  {
+    "path": "C:\\Users\\BS01685.BS-01685\\NeuroCalm\\TestData\\Subject 14\\oxy\\fS_Exported_oxygraph1.oxy.Block1.csv",
+    "kind": "fnirsoft_export",
+    "compatible": false,
+    "reason": "Raw fnirSoft export detected. The current model requires the Tufts preprocessed 8-feature signals (AB/CD intensity+phase oxy/deoxy) after dual-slope and band-pass filtering. These exports do not expose those columns directly.",
+    "details": {
+      "size": "5286 x 16",
+      "content": "Hemoglobin",
+      "required_features": [
+        "AB_I_O",
+        "AB_PHI_O",
+        "AB_I_DO",
+        "AB_PHI_DO",
+        "CD_I_O",
+        "CD_PHI_O",
+        "CD_I_DO",
+        "CD_PHI_DO"
+      ]
+    }
+  },
+  {
+    "path": "C:\\Users\\BS01685.BS-01685\\NeuroCalm\\TestData\\Subject 14\\SUB_14_01_02131452.nir",
+    "kind": "raw_light_device_export",
+    "compatible": false,
+    "reason": "Raw .nir export detected. The current SALIENT model expects the Tufts 8-feature dual-slope/band-pass processed signals, not device-level light exports.",
+    "details": {
+      "required_features": [
+        "AB_I_O",
+        "AB_PHI_O",
+        "AB_I_DO",
+        "AB_PHI_DO",
+        "CD_I_O",
+        "CD_PHI_O",
+        "CD_I_DO",
+        "CD_PHI_DO"
+      ]
+    }
+  },
+  {
+    "path": "C:\\Users\\BS01685.BS-01685\\NeuroCalm\\TestData\\Subject 14\\SUB_14_01_02131452.oxy",
+    "kind": "raw_hemoglobin_device_export",
+    "compatible": false,
+    "reason": "Raw .oxy export detected. The current SALIENT model also needs the phase-based hemoglobin channels (AB_PHI_*, CD_PHI_*), which are not present in these exports.",
+    "details": {
+      "required_features": [
+        "AB_I_O",
+        "AB_PHI_O",
+        "AB_I_DO",
+        "AB_PHI_DO",
+        "CD_I_O",
+        "CD_PHI_O",
+        "CD_I_DO",
+        "CD_PHI_DO"
+      ]
+    }
+  }
+]
