@@ -70,6 +70,30 @@ class AdminStats(BaseModel):
     model_accuracy: str
 
 
+class BatchPredictionCacheRequest(BaseModel):
+    source_dir: str
+    output_py: str | None = None
+    extensions: list[str] = [".csv", ".nir", ".oxy", ".mat", ".edf"]
+    merge_existing: bool = True
+
+
+class BatchPredictionCacheItem(BaseModel):
+    source_path: str
+    cache_keys: list[str]
+    status: str
+    result: dict | None = None
+    error: str | None = None
+
+
+class BatchPredictionCacheResponse(BaseModel):
+    source_dir: str
+    output_py: str
+    total_files: int
+    cached_count: int
+    failed_count: int
+    items: list[BatchPredictionCacheItem]
+
+
 class ModelInfoOut(BaseModel):
     model_type: str
     version: str

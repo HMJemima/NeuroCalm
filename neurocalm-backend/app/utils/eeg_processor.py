@@ -20,6 +20,7 @@ from app.utils.fnirs_preprocessing import (
     chunked_dataframe_to_windows,
     preprocess_supported_input,
 )
+from app.utils.prediction_cache import find_cached_prediction
 
 logger = logging.getLogger("neurocalm")
 settings = get_settings()
@@ -273,6 +274,21 @@ def load_model():
     logger.info("Model ready for inference (type=%s)", settings.MODEL_TYPE)
 
 
+def _ensure_model_loaded() -> bool:
+    """Lazily load the ML model only when a cache miss requires real inference."""
+    global _model_loaded, _model
+
+    if _model_loaded and _model is not None:
+        return True
+
+    if not settings.MODEL_PATH:
+        return False
+
+    logger.info("Cache miss for model-backed prediction; loading model now")
+    load_model()
+    return _model_loaded and _model is not None
+
+
 def _load_inference_windows(file_path: str) -> np.ndarray:
     """Load a file and return model-ready windows with shape (N, 150, 8)."""
     ext = os.path.splitext(file_path)[1].lower()
@@ -362,9 +378,25 @@ def _derive_band_powers_simulated(stress_score: float) -> dict:
     }
 
 
-def predict_stress(file_path: str) -> dict:
+def predict_stress(
+    file_path: str,
+    *,
+    cache_keys: list[str] | None = None,
+    original_filename: str | None = None,
+    use_cache: bool = True,
+) -> dict:
     """Run real inference when a model is loaded, otherwise simulate."""
-    if _model_loaded and _model is not None:
+    if use_cache:
+        cached = find_cached_prediction(
+            file_path,
+            cache_keys=cache_keys,
+            original_filename=original_filename,
+        )
+        if cached is not None:
+            logger.info("Using cached prediction for %s", original_filename or file_path)
+            return cached
+
+    if _ensure_model_loaded():
         try:
             windows = _load_inference_windows(file_path)
         except ValueError as exc:

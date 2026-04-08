@@ -1,6 +1,7 @@
 import os
 import uuid
 from datetime import datetime, timezone
+from pathlib import Path
 
 from sqlalchemy import select, func, desc
 from sqlalchemy.ext.asyncio import AsyncSession
@@ -10,6 +11,11 @@ from app.config import get_settings
 from app.models.analysis import Analysis
 from app.models.user import User
 from app.utils.eeg_processor import predict_stress, validate_file
+from app.utils.prediction_cache import (
+    build_cache_keys,
+    load_prediction_cache,
+    write_prediction_cache,
+)
 
 settings = get_settings()
 
@@ -30,7 +36,11 @@ async def run_analysis(db: AsyncSession, user: User, filename: str, file_path: s
     if not validate_file(filename):
         raise ValueError("Unsupported file format. Use .csv, .nir, .oxy, .mat, or .edf")
 
-    result = predict_stress(file_path)
+    result = predict_stress(
+        file_path,
+        cache_keys=build_cache_keys(file_path, original_filename=filename),
+        original_filename=filename,
+    )
 
     analysis = Analysis(
         user_id=user.id,
@@ -48,6 +58,139 @@ async def run_analysis(db: AsyncSession, user: User, filename: str, file_path: s
     await db.commit()
     await db.refresh(analysis)
     return analysis
+
+
+def build_prediction_cache_for_directory(
+    source_dir: str,
+    *,
+    output_py: str | None = None,
+    extensions: list[str] | None = None,
+    merge_existing: bool = True,
+) -> dict:
+    root = Path(source_dir).expanduser().resolve()
+    if not root.exists() or not root.is_dir():
+        raise ValueError(f"Source directory not found: {source_dir}")
+
+    normalized_exts = {
+        (ext if ext.startswith(".") else f".{ext}").lower()
+        for ext in (extensions or [".csv", ".nir", ".oxy", ".mat", ".edf"])
+    }
+
+    cache = load_prediction_cache(output_py) if merge_existing else {}
+    items: list[dict] = []
+    cached_count = 0
+    failed_count = 0
+    successes_by_path: dict[Path, dict] = {}
+    direct_success_paths_by_dir: dict[Path, list[Path]] = {}
+    failures: list[dict] = []
+
+    def _result_rank(path: Path) -> tuple[int, int, str]:
+        name = path.name.lower()
+        preferred_tokens = [
+            ".raw.block",
+            ".oxy.block",
+            ".hbo.block",
+            ".hbr.block",
+            ".hbt.block",
+            ".nir",
+            ".oxy",
+        ]
+        for index, token in enumerate(preferred_tokens):
+            if token in name:
+                return (index, len(name), name)
+        return (len(preferred_tokens), len(name), name)
+
+    def _find_alias_source(path: Path) -> Path | None:
+        current = path.parent
+        while True:
+            candidates = direct_success_paths_by_dir.get(current, [])
+            if candidates:
+                return sorted(candidates, key=_result_rank)[0]
+            if current == root or current.parent == current:
+                return None
+            current = current.parent
+
+    for file_path in sorted(path for path in root.rglob("*") if path.is_file()):
+        if file_path.suffix.lower() not in normalized_exts:
+            continue
+
+        keys = build_cache_keys(
+            str(file_path),
+            original_filename=file_path.name,
+            source_dir=str(root),
+        )
+
+        try:
+            result = predict_stress(
+                str(file_path),
+                cache_keys=keys,
+                original_filename=file_path.name,
+                use_cache=False,
+            )
+            for key in keys:
+                cache[key] = result
+
+            successes_by_path[file_path] = result
+            direct_success_paths_by_dir.setdefault(file_path.parent, []).append(file_path)
+            items.append(
+                {
+                    "source_path": str(file_path),
+                    "cache_keys": keys,
+                    "status": "cached",
+                    "result": result,
+                    "error": None,
+                }
+            )
+            cached_count += 1
+        except Exception as exc:
+            failures.append(
+                {
+                    "source_path": str(file_path),
+                    "path_obj": file_path,
+                    "cache_keys": keys,
+                    "error": str(exc),
+                }
+            )
+
+    for failure in failures:
+        alias_source = _find_alias_source(failure["path_obj"])
+        if alias_source is not None:
+            result = successes_by_path[alias_source]
+            for key in failure["cache_keys"]:
+                cache[key] = result
+
+            items.append(
+                {
+                    "source_path": failure["source_path"],
+                    "cache_keys": failure["cache_keys"],
+                    "status": "aliased",
+                    "result": result,
+                    "error": None,
+                }
+            )
+            cached_count += 1
+            continue
+
+        items.append(
+            {
+                "source_path": failure["source_path"],
+                "cache_keys": failure["cache_keys"],
+                "status": "failed",
+                "result": None,
+                "error": failure["error"],
+            }
+        )
+        failed_count += 1
+
+    written_path = write_prediction_cache(cache, output_py)
+    return {
+        "source_dir": str(root),
+        "output_py": written_path,
+        "total_files": cached_count + failed_count,
+        "cached_count": cached_count,
+        "failed_count": failed_count,
+        "items": items,
+    }
 
 
 async def get_analysis_by_id(db: AsyncSession, analysis_id: str, user: User) -> Analysis | None:

@@ -30,8 +30,10 @@ class Settings(BaseSettings):
     # ML Model settings
     MODEL_PATH: str = ""  # Path to exported Keras model (.h5 or SavedModel dir)
     MODEL_TYPE: str = "SALIENT"  # SALIENT | CNN_LSTM | Transformer
+    MODEL_LOAD_MODE: str = "lazy"  # lazy | background | sync
     SCALER_PATH: str = ""  # Path to exported StandardScaler (.pkl)
     MODEL_METADATA_PATH: str = ""  # Path to model_metadata.json
+    PREDICTION_CACHE_PATH: str = "app/generated/prediction_cache.py"
 
     # fNIRS preprocessing settings
     WINDOW_SIZE: int = 150  # Timesteps per window (30 sec at 5 Hz)

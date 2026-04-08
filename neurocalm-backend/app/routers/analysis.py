@@ -4,10 +4,16 @@ from sqlalchemy.ext.asyncio import AsyncSession
 from app.config import get_settings
 from app.database import get_db
 from app.models.user import User
-from app.schemas.analysis import AnalysisOut
+from app.schemas.analysis import AnalysisOut, BatchPredictionCacheRequest, BatchPredictionCacheResponse
 from app.utils.dependencies import get_current_user
 from app.utils.confidence import get_display_confidence
-from app.services.analysis_service import save_upload, run_analysis, get_analysis_by_id, delete_analysis
+from app.services.analysis_service import (
+    save_upload,
+    run_analysis,
+    get_analysis_by_id,
+    delete_analysis,
+    build_prediction_cache_for_directory,
+)
 
 settings = get_settings()
 router = APIRouter(prefix="/analysis", tags=["Analysis"])
@@ -84,3 +90,25 @@ async def remove_analysis(
     deleted = await delete_analysis(db, analysis_id, current_user)
     if not deleted:
         raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Analysis not found")
+
+
+@router.post("/cache/batch", response_model=BatchPredictionCacheResponse)
+async def build_batch_prediction_cache(
+    data: BatchPredictionCacheRequest,
+    current_user: User = Depends(get_current_user),
+):
+    if current_user.role != "admin":
+        raise HTTPException(
+            status_code=status.HTTP_403_FORBIDDEN,
+            detail="Only admin users can build the prediction cache.",
+        )
+
+    try:
+        return build_prediction_cache_for_directory(
+            data.source_dir,
+            output_py=data.output_py,
+            extensions=data.extensions,
+            merge_existing=data.merge_existing,
+        )
+    except ValueError as exc:
+        raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail=str(exc))

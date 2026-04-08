@@ -1,3 +1,5 @@
+import asyncio
+import logging
 from contextlib import asynccontextmanager
 
 from fastapi import FastAPI
@@ -11,6 +13,19 @@ from app.services.server_service import setup_log_capture
 from app.utils.eeg_processor import load_model
 
 settings = get_settings()
+logger = logging.getLogger(__name__)
+
+
+def _log_model_load_result(task: asyncio.Task):
+    try:
+        task.result()
+    except Exception:
+        logger.exception("Background ML model loading failed")
+
+
+def _load_model_in_background(app: FastAPI) -> None:
+    app.state.model_load_task = asyncio.create_task(asyncio.to_thread(load_model))
+    app.state.model_load_task.add_done_callback(_log_model_load_result)
 
 
 @asynccontextmanager
@@ -19,8 +34,15 @@ async def lifespan(app: FastAPI):
     await init_db()
     # Start capturing application logs for the admin server page
     setup_log_capture()
-    # Load ML model + scaler (runs in simulation mode if not configured)
-    load_model()
+    model_load_mode = settings.MODEL_LOAD_MODE.lower()
+    if model_load_mode == "sync":
+        # Local/dev option: wait for the model before accepting requests.
+        load_model()
+    elif model_load_mode == "background":
+        # Render/free-host option: keep auth/health responsive during cold starts.
+        _load_model_in_background(app)
+    else:
+        logger.info("MODEL_LOAD_MODE=%s - model will load on first cache miss", settings.MODEL_LOAD_MODE)
     yield
 
 
