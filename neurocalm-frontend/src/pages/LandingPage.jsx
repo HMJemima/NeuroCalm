@@ -12,8 +12,8 @@ import Card from '../components/common/Card';
 import Badge from '../components/common/Badge';
 
 const features = [
-  { icon: Upload, title: 'Easy File Upload', desc: 'Drag and drop your EEG files in .mat, .edf, or .csv format for instant analysis.', color: 'bg-accent-blue/10 text-accent-blue' },
-  { icon: Brain, title: 'AI-Powered Detection', desc: 'Advanced machine learning models trained on thousands of EEG recordings.', color: 'bg-accent-purple/10 text-accent-purple' },
+  { icon: Upload, title: 'Easy File Upload', desc: 'Drag and drop your fNIRS files in .mat, .edf, or .csv format for instant analysis.', color: 'bg-accent-blue/10 text-accent-blue' },
+  { icon: Brain, title: 'AI-Powered Detection', desc: 'Advanced machine learning models trained on thousands of fNIRS recordings.', color: 'bg-accent-purple/10 text-accent-purple' },
   { icon: BarChart3, title: 'Detailed Reports', desc: 'Comprehensive band power analysis with delta, theta, alpha, beta, and gamma insights.', color: 'bg-accent-cyan/10 text-accent-cyan' },
   { icon: Shield, title: 'Secure & Private', desc: 'Your brain data is encrypted and processed with enterprise-grade security.', color: 'bg-accent-green/10 text-accent-green' },
   { icon: History, title: 'Analysis History', desc: 'Track your stress patterns over time with a complete analysis history.', color: 'bg-accent-yellow/10 text-accent-yellow' },
@@ -22,7 +22,7 @@ const features = [
 
 const steps = [
   { num: '01', title: 'Create Account', desc: 'Sign up for free in seconds', icon: CheckCircle },
-  { num: '02', title: 'Upload EEG File', desc: 'Drop your .mat, .edf, or .csv file', icon: Upload },
+  { num: '02', title: 'Upload fNIRS File', desc: 'Drop your .mat, .edf, or .csv file', icon: Upload },
   { num: '03', title: 'AI Processing', desc: 'Our model analyzes brain signals', icon: Zap },
   { num: '04', title: 'Get Results', desc: 'Instant stress detection results', icon: BarChart3 },
 ];
@@ -62,7 +62,7 @@ export default function LandingPage() {
             <motion.div variants={fadeUp}>
               <Badge variant="default" className="mb-6">
                 <Brain size={14} />
-                AI-Powered EEG Analysis
+                AI-Powered fNIRS Analysis
               </Badge>
             </motion.div>
 
@@ -75,7 +75,7 @@ export default function LandingPage() {
             </motion.h1>
 
             <motion.p variants={fadeUp} className="text-lg text-text-secondary mb-8 max-w-[520px]">
-              Upload your EEG recordings and get instant AI-powered stress analysis.
+              Upload your fNIRS recordings and get instant AI-powered stress analysis.
               Understand your brain patterns with clinical-grade accuracy.
             </motion.p>
 
@@ -113,7 +113,7 @@ export default function LandingPage() {
           >
             <Badge className="mb-4">Features</Badge>
             <h2 className="text-3xl sm:text-4xl font-display font-bold mb-4">
-              Everything you need for EEG analysis
+              Everything you need for fNIRS analysis
             </h2>
             <p className="text-text-secondary max-w-md mx-auto">
               From upload to insights, our platform handles the entire stress detection workflow.
@@ -158,7 +158,7 @@ export default function LandingPage() {
               Simple 4-step process
             </h2>
             <p className="text-text-secondary max-w-md mx-auto">
-              Get from raw EEG data to actionable stress insights in under 30 seconds.
+              Get from raw fNIRS data to actionable stress insights in under 30 seconds.
             </p>
           </motion.div>
 
@@ -205,7 +205,7 @@ export default function LandingPage() {
                 Ready to understand your stress?
               </h2>
               <p className="text-text-secondary mb-8 max-w-md mx-auto">
-                Join thousands of researchers and clinicians using NeuroCalm for EEG stress analysis.
+                Join thousands of researchers and clinicians using NeuroCalm for fNIRS stress analysis.
               </p>
               <Button size="lg" onClick={() => navigate('/signup')}>
                 Get Started Free

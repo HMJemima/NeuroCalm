@@ -11,7 +11,7 @@ import useSidebarStore from '../store/sidebarStore';
 const guides = [
   {
     icon: Upload,
-    title: 'Uploading EEG Files',
+    title: 'Uploading fNIRS Files',
     desc: 'Learn how to upload .mat, .edf, or .csv files for analysis. Drag and drop or click to browse.',
     color: 'bg-accent-blue/10 text-accent-blue',
   },
@@ -38,7 +38,7 @@ const guides = [
 const faq = [
   {
     q: 'What file formats are supported?',
-    a: 'NeuroCalm supports .mat (MATLAB), .edf (European Data Format), and .csv files. Ensure your file contains valid EEG channel data.',
+    a: 'NeuroCalm supports .mat (MATLAB), .edf (European Data Format), and .csv files. Ensure your file contains valid fNIRS channel data.',
   },
   {
     q: 'How long does analysis take?',
@@ -54,7 +54,7 @@ const faq = [
   },
   {
     q: 'Is my data private?',
-    a: 'All data is encrypted in transit and at rest. We never share your EEG data with third parties.',
+    a: 'All data is encrypted in transit and at rest. We never share your fNIRS data with third parties.',
   },
   {
     q: 'How do I export reports?',

@@ -14,8 +14,8 @@ import Badge from '../components/common/Badge';
 const researchAreas = [
   {
     icon: Brain,
-    title: 'EEG Signal Processing',
-    desc: 'We apply advanced signal processing techniques — including wavelet transforms, FFT, and bandpass filtering — to extract meaningful features from raw EEG recordings.',
+    title: 'fNIRS Signal Processing',
+    desc: 'We apply advanced signal processing techniques — including wavelet transforms, FFT, and bandpass filtering — to extract meaningful features from raw fNIRS recordings.',
     color: 'bg-accent-blue/10 text-accent-blue',
   },
   {
@@ -27,7 +27,7 @@ const researchAreas = [
   {
     icon: FlaskConical,
     title: 'Machine Learning Models',
-    desc: 'We leverage ensemble methods and deep learning architectures trained on large annotated EEG datasets to achieve high-accuracy stress classification.',
+    desc: 'We leverage ensemble methods and deep learning architectures trained on large annotated fNIRS datasets to achieve high-accuracy stress classification.',
     color: 'bg-accent-cyan/10 text-accent-cyan',
   },
   {
@@ -40,14 +40,14 @@ const researchAreas = [
 
 const publications = [
   {
-    title: 'EEG-Based Stress Detection Using Band Power Features and Machine Learning',
+    title: 'fNIRS-Based Stress Detection Using Band Power Features and Machine Learning',
     authors: 'NeuroCalm Research Team',
     journal: 'Under Review — Journal of Neural Engineering',
     year: '2026',
     tag: 'Primary Research',
   },
   {
-    title: 'Automated EEG Preprocessing Pipeline for Real-Time Stress Classification',
+    title: 'Automated fNIRS Preprocessing Pipeline for Real-Time Stress Classification',
     authors: 'NeuroCalm Research Team',
     journal: 'In Preparation',
     year: '2026',
@@ -113,7 +113,7 @@ export default function ResearchPage() {
 
             <motion.p variants={fadeUp} className="text-lg text-text-secondary mb-8 max-w-[560px] mx-auto">
               Built on peer-reviewed neuroscience and validated machine learning techniques,
-              NeuroCalm brings research-grade EEG analysis to everyone.
+              NeuroCalm brings research-grade fNIRS analysis to everyone.
             </motion.p>
           </motion.div>
         </div>
@@ -172,13 +172,13 @@ export default function ResearchPage() {
           >
             <Badge className="mb-4">
               <Activity size={14} />
-              EEG Frequency Bands
+              fNIRS Frequency Bands
             </Badge>
             <h2 className="text-3xl sm:text-4xl font-display font-bold mb-4">
               Understanding brain waves
             </h2>
             <p className="text-text-secondary max-w-md mx-auto">
-              EEG signals are decomposed into frequency bands, each reflecting different neural processes.
+              fNIRS signals are decomposed into frequency bands, each reflecting different neural processes.
             </p>
           </motion.div>
 
@@ -287,7 +287,7 @@ export default function ResearchPage() {
             className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto"
           >
             {[
-              { step: '01', title: 'Preprocessing', desc: 'Raw EEG signals are cleaned using artifact removal, noise filtering, and channel selection algorithms.' },
+              { step: '01', title: 'Preprocessing', desc: 'Raw fNIRS signals are cleaned using artifact removal, noise filtering, and channel selection algorithms.' },
               { step: '02', title: 'Feature Extraction', desc: 'Band power features (PSD) are computed using Welch\'s method across all five frequency bands.' },
               { step: '03', title: 'Classification', desc: 'Extracted features are fed into an ensemble ML model that outputs stress probability scores with confidence levels.' },
             ].map((item) => (
@@ -326,7 +326,7 @@ export default function ResearchPage() {
                 Experience the research firsthand
               </h2>
               <p className="text-text-secondary mb-8 max-w-md mx-auto">
-                Try NeuroCalm for free and see how our AI-powered EEG analysis works on your own data.
+                Try NeuroCalm for free and see how our AI-powered fNIRS analysis works on your own data.
               </p>
               <Button size="lg" onClick={() => navigate('/signup')}>
                 Try It Free

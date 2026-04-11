@@ -36,7 +36,7 @@ export default function SignupForm({ onSubmit, isLoading }) {
     <form onSubmit={handleSubmit(handleFormSubmit)} className="space-y-5">
       <div>
         <h2 className="text-2xl font-bold font-display text-text-primary">Create Account</h2>
-        <p className="text-sm text-text-secondary mt-1">Start analyzing your EEG data today</p>
+        <p className="text-sm text-text-secondary mt-1">Start analyzing your fNIRS data today</p>
       </div>
 
       <Input

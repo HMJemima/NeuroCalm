@@ -47,7 +47,7 @@ export default function LoginPage() {
             <span className="gradient-text">Control Your Stress</span>
           </h1>
           <p className="text-base text-text-secondary mb-8">
-            Upload EEG recordings and get instant AI-powered stress analysis with clinical-grade accuracy.
+            Upload fNIRS recordings and get instant AI-powered stress analysis with clinical-grade accuracy.
           </p>
           <div className="space-y-4">
             {brandFeatures.map((feature) => (

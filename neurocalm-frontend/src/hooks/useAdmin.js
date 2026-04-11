@@ -29,9 +29,9 @@ const MOCK_MODEL = {
 
 const MOCK_ANALYSES = [
   { id: 'A-1052', user: 'Dr. Sarah Admin', file: 'admin_review_batch_01.mat', result: 'Moderate', confidence: '93.0%', date: '2026-02-23', status: 'completed' },
-  { id: 'A-1051', user: 'John Doe', file: 'eeg_recording_001.mat', result: 'Very Relaxed', confidence: '92.0%', date: '2026-02-23', status: 'completed' },
+  { id: 'A-1051', user: 'John Doe', file: 'fnirs_recording_001.mat', result: 'Very Relaxed', confidence: '92.0%', date: '2026-02-23', status: 'completed' },
   { id: 'A-1050', user: 'Emily Chen', file: 'session_morning.edf', result: 'Stressed', confidence: '87.0%', date: '2026-02-23', status: 'completed' },
-  { id: 'A-1049', user: 'Dr. Sarah Admin', file: 'clinical_trial_eeg_005.edf', result: 'Relaxed', confidence: '90.0%', date: '2026-02-22', status: 'completed' },
+  { id: 'A-1049', user: 'Dr. Sarah Admin', file: 'clinical_trial_fnirs_005.edf', result: 'Relaxed', confidence: '90.0%', date: '2026-02-22', status: 'completed' },
   { id: 'A-1048', user: 'John Doe', file: 'morning_session_feb22.edf', result: 'Relaxed', confidence: '89.0%', date: '2026-02-22', status: 'completed' },
   { id: 'A-1047', user: 'Dr. Michael Ross', file: 'post_meditation.mat', result: 'Very Relaxed', confidence: '95.0%', date: '2026-02-22', status: 'completed' },
   { id: 'A-1046', user: 'John Doe', file: 'baseline_test.csv', result: 'Moderate', confidence: '91.0%', date: '2026-02-21', status: 'completed' },
@@ -78,7 +78,7 @@ const MOCK_SERVER_STATUS = {
   ],
   logs: [
     { time: '14:32:05', level: 'INFO', message: 'Analysis A-1042 completed successfully (12.1s)' },
-    { time: '14:31:52', level: 'INFO', message: 'File upload received: eeg_session_12.mat (2.4 MB)' },
+    { time: '14:31:52', level: 'INFO', message: 'File upload received: fnirs_session_12.mat (2.4 MB)' },
     { time: '14:28:11', level: 'WARN', message: 'ML inference latency above threshold (15.2s > 15s)' },
     { time: '14:25:03', level: 'INFO', message: 'User login: admin@neurocalm.com' },
   ],

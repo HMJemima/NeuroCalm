@@ -43,7 +43,7 @@ const socials = [
 
 const faq = [
   {
-    q: 'What EEG file formats are supported?',
+    q: 'What fNIRS file formats are supported?',
     a: 'We currently support .mat, .edf, and .csv formats. More formats will be added based on user feedback.',
   },
   {

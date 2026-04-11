@@ -11,7 +11,7 @@ import Card from '../components/common/Card';
 import Badge from '../components/common/Badge';
 
 const betaFeatures = [
-  'Unlimited EEG file uploads',
+  'Unlimited fNIRS file uploads',
   'AI-powered stress detection',
   'Detailed band power analysis',
   'PDF & JSON report exports',
@@ -25,7 +25,7 @@ const whyFree = [
   {
     icon: Rocket,
     title: 'Early Adopter Advantage',
-    desc: 'Be among the first to use cutting-edge EEG stress analysis technology and help shape its future.',
+    desc: 'Be among the first to use cutting-edge fNIRS stress analysis technology and help shape its future.',
     color: 'bg-accent-blue/10 text-accent-blue',
   },
   {
@@ -86,7 +86,7 @@ export default function PricingPage() {
 
             <motion.p variants={fadeUp} className="text-lg text-text-secondary mb-4 max-w-[560px] mx-auto">
               We're in our initial beta version and we're happy to share that NeuroCalm is
-              completely free for everyone. No credit card, no hidden fees — just powerful EEG analysis.
+              completely free for everyone. No credit card, no hidden fees — just powerful fNIRS analysis.
             </motion.p>
 
             <motion.p variants={fadeUp} className="text-sm text-text-muted mb-8 max-w-[480px] mx-auto">
@@ -207,7 +207,7 @@ export default function PricingPage() {
                 Start analyzing for free today
               </h2>
               <p className="text-text-secondary mb-8 max-w-md mx-auto">
-                Join the beta and get unlimited access to AI-powered EEG stress detection — no strings attached.
+                Join the beta and get unlimited access to AI-powered fNIRS stress detection — no strings attached.
               </p>
               <Button size="lg" onClick={() => navigate('/signup')}>
                 Join the Beta

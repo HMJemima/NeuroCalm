@@ -27,7 +27,7 @@ export default function HistoryTable({
   onView,
   onDownload,
   onDelete,
-  emptyMessage = 'No analyses yet. Upload your first EEG file!',
+  emptyMessage = 'No analyses yet. Upload your first fNIRS file!',
 }) {
   if (items.length === 0) {
     return (

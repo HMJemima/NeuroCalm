@@ -138,7 +138,7 @@ export default function HistoryPage() {
   });
 
   const emptyMessage = history.length === 0
-    ? 'No analyses yet. Upload your first EEG file!'
+    ? 'No analyses yet. Upload your first fNIRS file!'
     : 'No analyses match your current search or filters.';
 
   return (
