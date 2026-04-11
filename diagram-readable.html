@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TestData to Model Preprocessing Flow</title>
+  <style>
+    :root {
+      --bg: #f5f7fb;
+      --panel: #ffffff;
+      --ink: #162033;
+      --muted: #5f6b80;
+      --line: #d8e0ee;
+      --accent: #1f6feb;
+      --accent-soft: #e9f2ff;
+      --good: #0f766e;
+      --shadow: 0 14px 40px rgba(17, 24, 39, 0.08);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(180deg, #f7f9fc 0%, #eef3fb 100%);
+      color: var(--ink);
+    }
+
+    .page {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 32px 20px 56px;
+    }
+
+    .hero {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      padding: 28px;
+      box-shadow: var(--shadow);
+      margin-bottom: 24px;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      background: var(--accent-soft);
+      color: var(--accent);
+      padding: 6px 10px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 14px 0 10px;
+      font-size: clamp(30px, 5vw, 48px);
+      line-height: 1.08;
+    }
+
+    .subtext {
+      margin: 0;
+      max-width: 850px;
+      color: var(--muted);
+      font-size: 17px;
+      line-height: 1.65;
+    }
+
+    .toolbar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 22px;
+    }
+
+    .button {
+      appearance: none;
+      border: 0;
+      border-radius: 12px;
+      padding: 12px 16px;
+      font-size: 14px;
+      font-weight: 700;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .button.primary {
+      background: var(--accent);
+      color: #fff;
+    }
+
+    .button.secondary {
+      background: #edf2fb;
+      color: var(--ink);
+    }
+
+    .overview {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 14px;
+      margin-bottom: 24px;
+    }
+
+    .mini-card,
+    .section,
+    .card {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+    }
+
+    .mini-card {
+      border-radius: 20px;
+      padding: 18px;
+    }
+
+    .mini-card .num {
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      background: var(--accent-soft);
+      color: var(--accent);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      margin-bottom: 12px;
+    }
+
+    .mini-card h2 {
+      margin: 0 0 8px;
+      font-size: 18px;
+    }
+
+    .mini-card p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.55;
+      font-size: 14px;
+    }
+
+    .section {
+      border-radius: 24px;
+      padding: 26px;
+      margin-bottom: 20px;
+    }
+
+    .section h2 {
+      margin: 0 0 8px;
+      font-size: 28px;
+    }
+
+    .section p.lead {
+      margin: 0 0 20px;
+      color: var(--muted);
+      line-height: 1.65;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 16px;
+    }
+
+    .card {
+      border-radius: 18px;
+      padding: 18px;
+    }
+
+    .card h3 {
+      margin: 0 0 10px;
+      font-size: 18px;
+    }
+
+    .tag {
+      display: inline-block;
+      margin-bottom: 10px;
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--good);
+      background: #e8fbf7;
+      border-radius: 999px;
+      padding: 5px 9px;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    ul,
+    ol {
+      margin: 0;
+      padding-left: 18px;
+      color: var(--ink);
+      line-height: 1.7;
+    }
+
+    li + li {
+      margin-top: 6px;
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 10px;
+      margin-top: 14px;
+    }
+
+    .feature-pill,
+    .output-pill {
+      border: 1px solid var(--line);
+      background: #f8fbff;
+      border-radius: 14px;
+      padding: 12px;
+      text-align: center;
+      font-weight: 700;
+      font-size: 14px;
+    }
+
+    .flowline {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 12px;
+      margin-top: 12px;
+    }
+
+    .flow-step {
+      background: #f8fbff;
+      border: 1px dashed #b8c8e6;
+      border-radius: 16px;
+      padding: 16px;
+    }
+
+    .flow-step strong {
+      display: block;
+      margin-bottom: 8px;
+      font-size: 15px;
+    }
+
+    .note {
+      margin-top: 18px;
+      padding: 14px 16px;
+      border-radius: 16px;
+      background: #fff8e8;
+      border: 1px solid #f1ddb0;
+      color: #6f5411;
+      line-height: 1.6;
+    }
+
+    .outputs {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 10px;
+      margin-top: 14px;
+    }
+
+    details {
+      margin-top: 20px;
+      border-top: 1px solid var(--line);
+      padding-top: 18px;
+    }
+
+    summary {
+      cursor: pointer;
+      font-weight: 700;
+    }
+
+    pre {
+      margin: 14px 0 0;
+      padding: 16px;
+      border-radius: 16px;
+      overflow-x: auto;
+      background: #0f172a;
+      color: #e2e8f0;
+      line-height: 1.5;
+      font-size: 13px;
+    }
+
+    .footer-note {
+      margin-top: 18px;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    @media (max-width: 720px) {
+      .page {
+        padding: 20px 14px 40px;
+      }
+
+      .hero,
+      .section {
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <section class="hero">
+      <span class="eyebrow">Readable Downloadable Version</span>
+      <h1>TestData to Model Preprocessing Flow</h1>
+      <p class="subtext">
+        This page keeps the same pipeline content as the Mermaid diagram, but restructures it into a clean
+        step-by-step layout so it is easier to read, share, print, or save.
+      </p>
+      <div class="toolbar">
+        <button class="button primary" onclick="window.print()">Save as PDF / Print</button>
+        <a class="button secondary" href="./diagram.mmd" download="diagram.mmd">Download Mermaid Source</a>
+        <a class="button secondary" href="./diagram.md" download="diagram.md">Download Markdown</a>
+      </div>
+    </section>
+
+    <section class="overview">
+      <div class="mini-card">
+        <div class="num">1</div>
+        <h2>Input</h2>
+        <p>Accept raw <code>.nir</code>, raw <code>.oxy</code>, fnirSoft CSV, or model-ready CSV files.</p>
+      </div>
+      <div class="mini-card">
+        <div class="num">2</div>
+        <h2>Parsing</h2>
+        <p>Choose the correct path based on input type, then extract signal columns and metadata.</p>
+      </div>
+      <div class="mini-card">
+        <div class="num">3</div>
+        <h2>Features</h2>
+        <p>Build a continuous representation and derive the Tufts-style 8 feature channels.</p>
+      </div>
+      <div class="mini-card">
+        <div class="num">4</div>
+        <h2>Alignment</h2>
+        <p>Normalize, smooth, map onto a common 5 Hz grid, then resample all features together.</p>
+      </div>
+      <div class="mini-card">
+        <div class="num">5</div>
+        <h2>Inference</h2>
+        <p>Convert to tensors with shape <code>(N, 150, 8)</code> and run SALIENT model inference.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>1. Supported Inputs</h2>
+      <p class="lead">
+        The preprocessing pipeline starts by identifying what kind of file was uploaded and choosing the matching conversion path.
+      </p>
+      <div class="grid">
+        <div class="card">
+          <span class="tag">Model-ready CSV</span>
+          <ul>
+            <li>Validate that the required 8 columns are present.</li>
+            <li>Convert values to numeric format.</li>
+            <li>Fill missing values with <code>0</code>.</li>
+            <li>If already chunked, normalize each chunk to exactly 150 rows.</li>
+            <li>If not chunked, create sliding windows with <code>window=150</code> and <code>stride=3</code>.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <span class="tag">Raw Signal Files</span>
+          <ul>
+            <li><code>.oxy</code>: read time plus oxy/deoxy optode pairs.</li>
+            <li><code>.nir</code>: read time plus 730nm, ambient, and 850nm triplets.</li>
+            <li><code>fnirSoft CSV</code>: inspect whether the export contains <code>hbo</code>, <code>hbr</code>, <code>oxy</code>, raw light, time, or marker data.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>2. Raw Data Conversion Paths</h2>
+      <p class="lead">
+        Each raw format is converted into a continuous signal representation before feature generation begins.
+      </p>
+      <div class="grid">
+        <div class="card">
+          <h3>Path A: Raw <code>.oxy</code></h3>
+          <ol>
+            <li>Read the time column.</li>
+            <li>Read oxy/deoxy optode pairs.</li>
+            <li>Build <code>oxy_matrix</code> and <code>deoxy_matrix</code>.</li>
+          </ol>
+        </div>
+        <div class="card">
+          <h3>Path B: Raw <code>.nir</code></h3>
+          <ol>
+            <li>Read the time column.</li>
+            <li>Read 730nm, ambient, and 850nm triplets.</li>
+            <li>Correct light signals using <code>730 - ambient</code> and <code>850 - ambient</code>.</li>
+          </ol>
+        </div>
+        <div class="card">
+          <h3>Path C: fnirSoft CSV</h3>
+          <ol>
+            <li>Inspect the export type.</li>
+            <li>If it contains <code>hbo / hbr / oxy</code>, build oxy/deoxy matrices.</li>
+            <li>If it contains raw light, apply light correction.</li>
+            <li>If it contains time or markers, load timing and marker metadata.</li>
+          </ol>
+        </div>
+      </div>
+      <div class="flowline">
+        <div class="flow-step">
+          <strong>Unify signals</strong>
+          All raw paths feed into one continuous signal representation.
+        </div>
+        <div class="flow-step">
+          <strong>Derive proxies</strong>
+          Build missing proxy signals when needed, including oxy, deoxy, and phase-like gradients.
+        </div>
+        <div class="flow-step">
+          <strong>Regional mapping</strong>
+          Apply experimental mapping to turn raw channels into analysis-friendly regions.
+        </div>
+      </div>
+      <div class="note">
+        Assumption used by the pipeline: optodes <strong>1..8 = AB</strong> and optodes <strong>9..16 = CD</strong>.
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>3. Tufts-style 8 Features</h2>
+      <p class="lead">
+        After regional mapping, the pipeline generates the 8 feature channels expected by the downstream model.
+      </p>
+      <div class="features">
+        <div class="feature-pill">AB_I_O</div>
+        <div class="feature-pill">AB_PHI_O</div>
+        <div class="feature-pill">AB_I_DO</div>
+        <div class="feature-pill">AB_PHI_DO</div>
+        <div class="feature-pill">CD_I_O</div>
+        <div class="feature-pill">CD_PHI_O</div>
+        <div class="feature-pill">CD_I_DO</div>
+        <div class="feature-pill">CD_PHI_DO</div>
+      </div>
+      <div class="flowline">
+        <div class="flow-step">
+          <strong>Cleanup</strong>
+          Perform feature cleanup and normalization.
+        </div>
+        <div class="flow-step">
+          <strong>Smoothing</strong>
+          Apply short smoothing and rolling baseline removal.
+        </div>
+        <div class="flow-step">
+          <strong>Scaling</strong>
+          Mean-center, standardize, and clip to a safe range.
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>4. Time Alignment and Windowing</h2>
+      <p class="lead">
+        The cleaned feature channels are synchronized onto one time base, then converted into model-ready windows.
+      </p>
+      <div class="flowline">
+        <div class="flow-step">
+          <strong>Common grid</strong>
+          Build a common time grid at 5 Hz.
+        </div>
+        <div class="flow-step">
+          <strong>Marker trim</strong>
+          Trim with marker times whenever markers are available.
+        </div>
+        <div class="flow-step">
+          <strong>Resample</strong>
+          Resample all 8 features onto the same grid.
+        </div>
+        <div class="flow-step">
+          <strong>Window creation</strong>
+          Feed the aligned features into sliding-window chunking with <code>window=150</code> and <code>stride=3</code>.
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>5. Final Model Input and Output</h2>
+      <p class="lead">
+        Once chunking is complete, the data becomes ready for direct inference by the deployed SALIENT model.
+      </p>
+      <div class="flowline">
+        <div class="flow-step">
+          <strong>Chunked dataframe</strong>
+          Final model input is a chunked dataframe containing the chunk ID plus the 8 feature columns.
+        </div>
+        <div class="flow-step">
+          <strong>Grouping</strong>
+          Group rows by chunk.
+        </div>
+        <div class="flow-step">
+          <strong>Tensor shape</strong>
+          Convert into tensors with shape <code>(N, 150, 8)</code>.
+        </div>
+        <div class="flow-step">
+          <strong>Inference</strong>
+          Run SALIENT model inference.
+        </div>
+      </div>
+      <div class="outputs">
+        <div class="output-pill">stress_score</div>
+        <div class="output-pill">confidence</div>
+        <div class="output-pill">stress_probability</div>
+        <div class="output-pill">workload_class</div>
+        <div class="output-pill">class_probabilities</div>
+      </div>
+
+      <details>
+        <summary>Show original Mermaid source</summary>
+        <pre id="mermaid-source"></pre>
+      </details>
+
+      <p class="footer-note">
+        Tip: open this file in a browser, then use <strong>Save as PDF / Print</strong> if you want a shareable document version.
+      </p>
+    </section>
+  </div>
+
+  <script>
+    const mermaidSource = `flowchart TD
+    A["TestData input files<br/>.nir / .oxy / fnirSoft CSV / model-ready CSV"]
+    A --> B{"Input type?"}
+
+    B -->|"Model-ready CSV"| C["Validate required 8 columns"]
+    C --> D["Convert to numeric<br/>fill missing values with 0"]
+    D --> E{"Already chunked?"}
+    E -->|"Yes"| F["Normalize each chunk<br/>to exactly 150 rows"]
+    E -->|"No"| G["Create sliding windows<br/>window=150, stride=3"]
+
+    B -->|"Raw .oxy"| H["Read time column<br/>read oxy/deoxy optode pairs"]
+    B -->|"Raw .nir"| I["Read time column<br/>read 730nm / ambient / 850nm triplets"]
+    B -->|"fnirSoft CSV"| J["Inspect export type<br/>hbo / hbr / oxy / raw / time / marker"]
+
+    H --> K["Build oxy_matrix + deoxy_matrix"]
+    I --> L["Correct light signals<br/>730-ambient and 850-ambient"]
+    J --> M{"fnirSoft content?"}
+    M -->|"hbo / hbr / oxy"| K
+    M -->|"raw light"| L
+    M -->|"time / marker"| N["Load timing and marker metadata"]
+
+    K --> O["Build continuous signal representation"]
+    L --> O
+    N --> O
+
+    O --> P["Derive missing proxy signals if needed<br/>oxy, deoxy, phase-like gradients"]
+    P --> Q["Experimental regional mapping"]
+    R["Assumption used by pipeline<br/>Optodes 1..8 = AB<br/>Optodes 9..16 = CD"] -.-> Q
+
+    Q --> S["Create Tufts-style 8 features"]
+    S --> S1["AB_I_O"]
+    S --> S2["AB_PHI_O"]
+    S --> S3["AB_I_DO"]
+    S --> S4["AB_PHI_DO"]
+    S --> S5["CD_I_O"]
+    S --> S6["CD_PHI_O"]
+    S --> S7["CD_I_DO"]
+    S --> S8["CD_PHI_DO"]
+
+    S1 --> T["Feature cleanup and normalization"]
+    S2 --> T
+    S3 --> T
+    S4 --> T
+    S5 --> T
+    S6 --> T
+    S7 --> T
+    S8 --> T
+
+    T --> U["Short smoothing<br/>rolling baseline removal<br/>mean centering<br/>std scaling<br/>clip to safe range"]
+    U --> V["Build common time grid at 5 Hz"]
+    V --> W["Trim with marker times when available"]
+    W --> X["Resample all 8 features onto common grid"]
+
+    F --> Y["Chunked model-ready dataframe"]
+    G --> Y
+    X --> G
+
+    Y --> Z["Final model input format<br/>chunk + 8 feature columns"]
+    Z --> AA["Group by chunk"]
+    AA --> AB["Tensor shape = (N, 150, 8)"]
+    AB --> AC["SALIENT model inference"]
+    AC --> AD["Prediction output<br/>stress_score<br/>confidence<br/>stress_probability<br/>workload_class<br/>class_probabilities"]`;
+
+    document.getElementById("mermaid-source").textContent = mermaidSource;
+  </script>
+</body>
+</html>
