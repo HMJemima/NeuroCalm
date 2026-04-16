@@ -12,9 +12,9 @@ import Card from '../components/common/Card';
 import Badge from '../components/common/Badge';
 
 const features = [
-  { icon: Upload, title: 'Easy File Upload', desc: 'Drag and drop your fNIRS files in .mat, .edf, or .csv format for instant analysis.', color: 'bg-accent-blue/10 text-accent-blue' },
+  { icon: Upload, title: 'Easy File Upload', desc: 'Drag and drop your .csv, .nir, or .oxy file for instant analysis.', color: 'bg-accent-blue/10 text-accent-blue' },
   { icon: Brain, title: 'AI-Powered Detection', desc: 'Advanced machine learning models trained on thousands of fNIRS recordings.', color: 'bg-accent-purple/10 text-accent-purple' },
-  { icon: BarChart3, title: 'Detailed Reports', desc: 'Comprehensive band power analysis with delta, theta, alpha, beta, and gamma insights.', color: 'bg-accent-cyan/10 text-accent-cyan' },
+  { icon: BarChart3, title: 'Detailed Reports', desc: 'Comprehensive stress summaries with confidence, history, and export-ready results.', color: 'bg-accent-cyan/10 text-accent-cyan' },
   { icon: Shield, title: 'Secure & Private', desc: 'Your brain data is encrypted and processed with enterprise-grade security.', color: 'bg-accent-green/10 text-accent-green' },
   { icon: History, title: 'Analysis History', desc: 'Track your stress patterns over time with a complete analysis history.', color: 'bg-accent-yellow/10 text-accent-yellow' },
   { icon: Download, title: 'Export Results', desc: 'Download detailed PDF or JSON reports for your records or healthcare provider.', color: 'bg-accent-red/10 text-accent-red' },
@@ -22,14 +22,14 @@ const features = [
 
 const steps = [
   { num: '01', title: 'Create Account', desc: 'Sign up for free in seconds', icon: CheckCircle },
-  { num: '02', title: 'Upload fNIRS File', desc: 'Drop your .mat, .edf, or .csv file', icon: Upload },
+  { num: '02', title: 'Upload fNIRS File', desc: 'Drop your .csv, .nir, or .oxy file', icon: Upload },
   { num: '03', title: 'AI Processing', desc: 'Our model analyzes brain signals', icon: Zap },
   { num: '04', title: 'Get Results', desc: 'Instant stress detection results', icon: BarChart3 },
 ];
 
 const stats = [
-  { value: '95%', label: 'Accuracy' },
-  { value: '10K+', label: 'Analyses' },
+  { value: '80.29%', label: 'Accuracy' },
+  { value: '50+', label: 'Analyses' },
   { value: '<30s', label: 'Processing' },
 ];
 
@@ -84,7 +84,7 @@ export default function LandingPage() {
                 Try Free Analysis
                 <ArrowRight size={16} className="ml-2 inline" />
               </Button>
-              <Button variant="ghost">
+              <Button variant="ghost" onClick={() => navigate('/demo')}>
                 <Play size={16} className="mr-2 inline" />
                 Watch Demo
               </Button>

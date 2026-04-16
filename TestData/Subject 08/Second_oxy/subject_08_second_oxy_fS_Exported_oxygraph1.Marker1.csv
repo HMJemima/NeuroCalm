@@ -1,0 +1,25 @@
+fnirSoft:,Exported CSV File
+Version:,4.3
+ExportDate:,2/26/2025 10:44:27 AM
+VariableInfo
+Name:,oxygraph1.Marker1
+Size:,11 x 2
+Type:,Numeric
+Content:,Marker
+Date:,2/26/2025 10:44:05 AM
+Notes:,Marker saved by Oxygraph from files C:\Users\NeuroLabPC_1\Documents\COBI Studio Data\sudeep data\Subject 08\SUB_08_02_02041225.oxy  C:\Users\NeuroLabPC_1\Documents\COBI Studio Data\sudeep data\Subject 08\SUB_08_02_02041225.mrk  C:\Users\NeuroLabPC_1\Documents\COBI Studio Data\sudeep data\Subject 08\SUB_08_02_02041225_C.mrk
+Labels:,MARKER
+VariableData
+Marker,Marker
+MarkerTime,MarkerType
+23.371,-5
+41.954,1
+157.422,2
+350.079,1
+470.297,2
+623.594,1
+743.344,2
+881.891,1
+1003.172,2
+1136.797,1
+1149.998,-1

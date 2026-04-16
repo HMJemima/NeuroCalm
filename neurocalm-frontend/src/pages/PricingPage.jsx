@@ -13,7 +13,7 @@ import Badge from '../components/common/Badge';
 const betaFeatures = [
   'Unlimited fNIRS file uploads',
   'AI-powered stress detection',
-  'Detailed band power analysis',
+  'Detailed analysis reports',
   'PDF & JSON report exports',
   'Complete analysis history',
   'Secure data encryption',

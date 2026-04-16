@@ -73,7 +73,7 @@ class AdminStats(BaseModel):
 class BatchPredictionCacheRequest(BaseModel):
     source_dir: str
     output_py: str | None = None
-    extensions: list[str] = [".csv", ".nir", ".oxy", ".mat", ".edf"]
+    extensions: list[str] = [".csv", ".nir", ".oxy"]
     merge_existing: bool = True
 
 

@@ -12,13 +12,13 @@ const guides = [
   {
     icon: Upload,
     title: 'Uploading fNIRS Files',
-    desc: 'Learn how to upload .mat, .edf, or .csv files for analysis. Drag and drop or click to browse.',
+    desc: 'Learn how to upload .csv, .nir, or .oxy files for analysis. Drag and drop or click to browse.',
     color: 'bg-accent-blue/10 text-accent-blue',
   },
   {
     icon: Brain,
     title: 'Understanding Results',
-    desc: 'Your analysis shows a stress score, confidence level, and detailed band power breakdown across five frequency bands.',
+    desc: 'Your analysis shows a stress score, confidence level, and the predicted stress state for the uploaded file.',
     color: 'bg-accent-purple/10 text-accent-purple',
   },
   {
@@ -38,7 +38,7 @@ const guides = [
 const faq = [
   {
     q: 'What file formats are supported?',
-    a: 'NeuroCalm supports .mat (MATLAB), .edf (European Data Format), and .csv files. Ensure your file contains valid fNIRS channel data.',
+    a: 'NeuroCalm supports .csv, .nir, and .oxy files. Ensure your file contains valid fNIRS channel data.',
   },
   {
     q: 'How long does analysis take?',

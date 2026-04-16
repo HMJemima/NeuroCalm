@@ -4,13 +4,12 @@ import Sidebar from '../components/layout/Sidebar';
 import Card from '../components/common/Card';
 import UploadZone from '../components/dashboard/UploadZone';
 import AnalysisResult from '../components/dashboard/AnalysisResult';
-import BandPowerChart from '../components/dashboard/BandPowerChart';
 import { useAnalysis } from '../hooks/useAnalysis';
 import appConfig from '../config/appConfig';
 import useSidebarStore from '../store/sidebarStore';
 
 const tips = [
-  { icon: FileText, title: 'Supported Formats', desc: 'Upload .mat, .edf, .csv, .nir, or .oxy files. In live model mode, model-ready CSV is the fully supported path.' },
+  { icon: FileText, title: 'Supported Formats', desc: 'Upload .csv, .nir, or .oxy files.' },
   { icon: Zap, title: 'Fast Processing', desc: 'AI analysis completes in under 30 seconds.' },
   { icon: Shield, title: 'Secure Upload', desc: 'Your data is encrypted and processed securely.' },
   { icon: Clock, title: 'Auto-Saved', desc: 'All results are saved to your history automatically.' },
@@ -112,11 +111,9 @@ export default function NewAnalysisPage() {
 
                 <Card hover={false}>
                   <h3 className="text-lg font-semibold font-display text-text-primary mb-6">
-                    Band Power Breakdown
+                    Analysis Details
                   </h3>
-                  <BandPowerChart bandPowers={currentAnalysis.band_powers} />
-
-                  <div className="mt-6 p-4 bg-bg-glass rounded-xl border border-border-color">
+                  <div className="p-4 bg-bg-glass rounded-xl border border-border-color">
                     <p className="text-xs text-text-muted mb-1 uppercase tracking-wider font-medium">File Analyzed</p>
                     <p className="text-sm text-text-primary font-medium">{currentAnalysis.filename}</p>
                     <p className="text-xs text-text-muted mt-1">

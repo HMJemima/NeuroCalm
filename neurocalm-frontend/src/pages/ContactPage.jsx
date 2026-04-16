@@ -44,7 +44,7 @@ const socials = [
 const faq = [
   {
     q: 'What fNIRS file formats are supported?',
-    a: 'We currently support .mat, .edf, and .csv formats. More formats will be added based on user feedback.',
+    a: 'We currently support .csv, .nir, and .oxy formats.',
   },
   {
     q: 'Is my data safe?',

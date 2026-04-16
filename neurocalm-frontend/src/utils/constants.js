@@ -1,4 +1,4 @@
-export const VALID_FILE_EXTENSIONS = ['.mat', '.edf', '.csv', '.nir', '.oxy'];
+export const VALID_FILE_EXTENSIONS = ['.csv', '.nir', '.oxy'];
 
 export const STRESS_LEVELS = {
   VERY_RELAXED: {

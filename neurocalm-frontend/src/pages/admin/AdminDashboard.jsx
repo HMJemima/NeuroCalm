@@ -9,7 +9,6 @@ import Card from '../../components/common/Card';
 import StatsCard from '../../components/dashboard/StatsCard';
 import UploadZone from '../../components/dashboard/UploadZone';
 import AnalysisResult from '../../components/dashboard/AnalysisResult';
-import BandPowerChart from '../../components/dashboard/BandPowerChart';
 import UsersTable from '../../components/admin/UsersTable';
 import SystemStats from '../../components/admin/SystemStats';
 import ActivityFeed from '../../components/admin/ActivityFeed';
@@ -139,19 +138,13 @@ export default function AdminDashboard() {
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
-                  className="grid grid-cols-1 gap-4 xl:grid-cols-2"
+                  className="grid grid-cols-1 gap-4"
                 >
                   <Card hover={false}>
                     <h3 className="text-sm font-semibold font-display text-text-primary mb-4">
                       Stress Detection
                     </h3>
                     <AnalysisResult result={currentAnalysis} />
-                  </Card>
-                  <Card hover={false}>
-                    <h3 className="text-sm font-semibold font-display text-text-primary mb-4">
-                      Band Power
-                    </h3>
-                    <BandPowerChart bandPowers={currentAnalysis.band_powers} />
                   </Card>
                 </motion.div>
               )}

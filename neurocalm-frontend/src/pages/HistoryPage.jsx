@@ -6,12 +6,10 @@ import Card from '../components/common/Card';
 import Modal from '../components/common/Modal';
 import HistoryTable from '../components/dashboard/HistoryTable';
 import AnalysisResult from '../components/dashboard/AnalysisResult';
-import BandPowerChart from '../components/dashboard/BandPowerChart';
 import { useAnalysis } from '../hooks/useAnalysis';
 import useAuthStore from '../store/authStore';
 import useSidebarStore from '../store/sidebarStore';
 import { formatDate, getStressLevelValue, getStressLevelOptions } from '../utils/helpers';
-import { getAnalysisBandPowers } from '../utils/analysisPresentation';
 
 const RESULT_FILTERS = [
   { value: 'all', label: 'All Results' },
@@ -34,8 +32,6 @@ const FILE_TYPE_FILTERS = [
   { value: '.csv', label: 'CSV' },
   { value: '.nir', label: 'NIR' },
   { value: '.oxy', label: 'OXY' },
-  { value: '.mat', label: 'MAT' },
-  { value: '.edf', label: 'EDF' },
 ];
 
 function getFileExtension(filename = '') {
@@ -331,19 +327,11 @@ export default function HistoryPage() {
               </button>
             </div>
 
-            <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
-              <div>
-                <h4 className="text-sm font-medium text-text-muted mb-4 uppercase tracking-wider">
-                  Stress Analysis
-                </h4>
-                <AnalysisResult result={selected} />
-              </div>
-              <div>
-                <h4 className="text-sm font-medium text-text-muted mb-4 uppercase tracking-wider">
-                  Band Power Breakdown
-                </h4>
-                <BandPowerChart bandPowers={getAnalysisBandPowers(selected)} />
-              </div>
+            <div>
+              <h4 className="text-sm font-medium text-text-muted mb-4 uppercase tracking-wider">
+                Stress Analysis
+              </h4>
+              <AnalysisResult result={selected} />
             </div>
           </div>
         )}

@@ -25,7 +25,7 @@ from app.utils.prediction_cache import find_cached_prediction
 logger = logging.getLogger("neurocalm")
 settings = get_settings()
 
-VALID_EXTENSIONS = {".mat", ".edf", ".csv", ".nir", ".oxy"}
+VALID_EXTENSIONS = {".csv", ".nir", ".oxy"}
 CLASS_LABELS = ["0-back", "1-back", "2-back", "3-back"]
 
 _model = None

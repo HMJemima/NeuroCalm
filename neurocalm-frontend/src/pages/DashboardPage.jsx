@@ -7,13 +7,11 @@ import Card from '../components/common/Card';
 import StatsCard from '../components/dashboard/StatsCard';
 import UploadZone from '../components/dashboard/UploadZone';
 import AnalysisResult from '../components/dashboard/AnalysisResult';
-import BandPowerChart from '../components/dashboard/BandPowerChart';
 import HistoryTable from '../components/dashboard/HistoryTable';
 import useAuthStore from '../store/authStore';
 import useSidebarStore from '../store/sidebarStore';
 import { useAnalysis } from '../hooks/useAnalysis';
 import { formatDate, getStressLevelValue } from '../utils/helpers';
-import { getAnalysisBandPowers } from '../utils/analysisPresentation';
 
 function average(values) {
   if (!values.length) {
@@ -202,20 +200,13 @@ export default function DashboardPage() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              className="grid grid-cols-1 gap-6 xl:grid-cols-2"
+              className="grid grid-cols-1 gap-6"
             >
               <Card hover={false}>
                 <h3 className="text-lg font-semibold font-display text-text-primary mb-6">
                   Stress Analysis Result
                 </h3>
                 <AnalysisResult result={currentAnalysis} />
-              </Card>
-
-              <Card hover={false}>
-                <h3 className="text-lg font-semibold font-display text-text-primary mb-6">
-                  Band Power Analysis
-                </h3>
-                <BandPowerChart bandPowers={currentAnalysis.band_powers} />
               </Card>
             </motion.div>
           )}
@@ -267,19 +258,11 @@ export default function DashboardPage() {
               </button>
             </div>
 
-            <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
-              <div>
-                <h4 className="text-sm font-medium text-text-muted mb-4 uppercase tracking-wider">
-                  Stress Analysis
-                </h4>
-                <AnalysisResult result={viewItem} />
-              </div>
-              <div>
-                <h4 className="text-sm font-medium text-text-muted mb-4 uppercase tracking-wider">
-                  Band Power Breakdown
-                </h4>
-                <BandPowerChart bandPowers={getAnalysisBandPowers(viewItem)} />
-              </div>
+            <div>
+              <h4 className="text-sm font-medium text-text-muted mb-4 uppercase tracking-wider">
+                Stress Analysis
+              </h4>
+              <AnalysisResult result={viewItem} />
             </div>
           </div>
         )}

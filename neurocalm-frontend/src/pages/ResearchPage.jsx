@@ -21,7 +21,7 @@ const researchAreas = [
   {
     icon: Activity,
     title: 'Stress Biomarkers',
-    desc: 'Our models identify stress-related patterns across delta, theta, alpha, beta, and gamma frequency bands, correlating brain wave activity with psychological stress states.',
+    desc: 'Our models identify stress-related temporal and hemodynamic patterns that correlate with psychological stress states.',
     color: 'bg-accent-purple/10 text-accent-purple',
   },
   {
@@ -40,7 +40,7 @@ const researchAreas = [
 
 const publications = [
   {
-    title: 'fNIRS-Based Stress Detection Using Band Power Features and Machine Learning',
+    title: 'fNIRS-Based Stress Detection Using Multi-Feature Signal Analysis and Machine Learning',
     authors: 'NeuroCalm Research Team',
     journal: 'Under Review — Journal of Neural Engineering',
     year: '2026',
@@ -161,7 +161,7 @@ export default function ResearchPage() {
         </div>
       </section>
 
-      {/* Brain Wave Bands */}
+      {false && (
       <section className="relative z-10 py-24 bg-bg-secondary/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <motion.div
@@ -205,6 +205,7 @@ export default function ResearchPage() {
           </motion.div>
         </div>
       </section>
+      )}
 
       {/* Publications */}
       <section className="relative z-10 py-24">
@@ -288,7 +289,7 @@ export default function ResearchPage() {
           >
             {[
               { step: '01', title: 'Preprocessing', desc: 'Raw fNIRS signals are cleaned using artifact removal, noise filtering, and channel selection algorithms.' },
-              { step: '02', title: 'Feature Extraction', desc: 'Band power features (PSD) are computed using Welch\'s method across all five frequency bands.' },
+              { step: '02', title: 'Feature Extraction', desc: 'Cleaned recordings are transformed into model-ready summary features that capture the relevant signal patterns.' },
               { step: '03', title: 'Classification', desc: 'Extracted features are fed into an ensemble ML model that outputs stress probability scores with confidence levels.' },
             ].map((item) => (
               <motion.div key={item.step} variants={fadeUp}>

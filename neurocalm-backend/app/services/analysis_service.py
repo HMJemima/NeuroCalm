@@ -34,7 +34,7 @@ async def save_upload(file_content: bytes, filename: str) -> str:
 async def run_analysis(db: AsyncSession, user: User, filename: str, file_path: str) -> Analysis:
     """Run fNIRS/EEG analysis on the uploaded file and persist the result."""
     if not validate_file(filename):
-        raise ValueError("Unsupported file format. Use .csv, .nir, .oxy, .mat, or .edf")
+        raise ValueError("Unsupported file format. Use .csv, .nir, or .oxy")
 
     result = predict_stress(
         file_path,
@@ -73,7 +73,7 @@ def build_prediction_cache_for_directory(
 
     normalized_exts = {
         (ext if ext.startswith(".") else f".{ext}").lower()
-        for ext in (extensions or [".csv", ".nir", ".oxy", ".mat", ".edf"])
+        for ext in (extensions or [".csv", ".nir", ".oxy"])
     }
 
     cache = load_prediction_cache(output_py) if merge_existing else {}

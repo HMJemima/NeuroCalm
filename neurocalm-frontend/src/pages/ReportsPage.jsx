@@ -10,12 +10,10 @@ import Badge from '../components/common/Badge';
 import Button from '../components/common/Button';
 import Modal from '../components/common/Modal';
 import AnalysisResult from '../components/dashboard/AnalysisResult';
-import BandPowerChart from '../components/dashboard/BandPowerChart';
 import { useAnalysis } from '../hooks/useAnalysis';
 import useAuthStore from '../store/authStore';
 import useSidebarStore from '../store/sidebarStore';
 import { formatDate, getStressLevel, getStressLevelOptions, getStressLevelValue } from '../utils/helpers';
-import { getAnalysisBandPowers } from '../utils/analysisPresentation';
 
 const levelConfig = {
   'Very Relaxed': { color: 'bg-emerald-400/10 text-emerald-300', icon: CheckCircle },
@@ -254,23 +252,17 @@ export default function ReportsPage() {
                     </Badge>
                   </div>
                   <p className="text-sm text-text-secondary">
-                    Full analysis report with stress score, confidence, and band power breakdown.
+                    Full analysis report with stress score, confidence, and saved result details.
                   </p>
                 </div>
               </div>
 
-              <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
+              <div className="grid grid-cols-1 gap-6">
                 <Card hover={false}>
                   <h4 className="text-sm font-medium text-text-muted mb-4 uppercase tracking-wider">
                     Stress Analysis
                   </h4>
                   <AnalysisResult result={viewReport} />
-                </Card>
-                <Card hover={false}>
-                  <h4 className="text-sm font-medium text-text-muted mb-4 uppercase tracking-wider">
-                    Band Power Breakdown
-                  </h4>
-                  <BandPowerChart bandPowers={getAnalysisBandPowers(viewReport)} />
                 </Card>
               </div>
 

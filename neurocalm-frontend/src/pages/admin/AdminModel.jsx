@@ -121,12 +121,12 @@ export default function AdminModel() {
                   </h3>
                   <div className="space-y-3">
                     {[
-                      { name: 'Beta Band Power (13-30 Hz)', importance: 92 },
-                      { name: 'Alpha Band Power (8-13 Hz)', importance: 87 },
-                      { name: 'Alpha/Beta Ratio', importance: 78 },
-                      { name: 'Theta Band Power (4-8 Hz)', importance: 65 },
-                      { name: 'Gamma Band Power (30-100 Hz)', importance: 52 },
-                      { name: 'Delta Band Power (0.5-4 Hz)', importance: 41 },
+                      { name: 'Frontal Signal Mean', importance: 92 },
+                      { name: 'Oxygenation Variance', importance: 87 },
+                      { name: 'Channel Correlation Index', importance: 78 },
+                      { name: 'Temporal Slope Feature', importance: 65 },
+                      { name: 'Windowed Energy Summary', importance: 52 },
+                      { name: 'Baseline Drift Measure', importance: 41 },
                     ].map((feature) => (
                       <div key={feature.name} className="flex items-center gap-4">
                         <span className="text-sm text-text-secondary w-56 flex-shrink-0">{feature.name}</span>

@@ -17,6 +17,7 @@ import HelpPage from './pages/HelpPage';
 import PricingPage from './pages/PricingPage';
 import ResearchPage from './pages/ResearchPage';
 import ContactPage from './pages/ContactPage';
+import DemoPage from './pages/DemoPage';
 import OAuthCallbackPage from './pages/OAuthCallbackPage';
 import AdminDashboard from './pages/admin/AdminDashboard';
 import AdminUsers from './pages/admin/AdminUsers';
@@ -47,6 +48,7 @@ function AppContent() {
       <Route path="/pricing" element={<PricingPage />} />
       <Route path="/research" element={<ResearchPage />} />
       <Route path="/contact" element={<ContactPage />} />
+      <Route path="/demo" element={<DemoPage />} />
 
       {/* Protected Routes */}
       <Route element={<ProtectedRoute />}>
