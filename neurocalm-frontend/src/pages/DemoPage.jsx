@@ -8,8 +8,8 @@ import Button from '../components/common/Button';
 import Card from '../components/common/Card';
 import Badge from '../components/common/Badge';
 
-const DEMO_VIDEO_URL = 'https://youtu.be/97VJs4tSyEg?si=os1rRLgQbXDxefeH';
-const DEMO_EMBED_URL = 'https://www.youtube.com/embed/97VJs4tSyEg?si=os1rRLgQbXDxefeH';
+const DEMO_VIDEO_URL = 'https://youtu.be/iqjEQoTkNXA?si=ls1eNDQSzM6dwPeh';
+const DEMO_EMBED_URL = 'https://www.youtube.com/embed/iqjEQoTkNXA?si=ls1eNDQSzM6dwPeh';
 
 const fadeUp = {
   initial: { opacity: 0, y: 24 },
